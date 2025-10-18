@@ -45,7 +45,7 @@ C10 Index 加权加密货币指数（以下简称“指数”）衡量按**自�
 
 ### 4.2 月度再平衡
 
-每月首日 UTC 00:00 依据计算口径**锁定份额**（见 5.4A），不更换成分。
+每月首日 UTC 00:00 依据计算口径**锁定份额**，不更换成分。
 
 ### 4.3 非例行调整
 
@@ -79,15 +79,15 @@ $$
 指数在再平衡区间 $[r, r^+)$ 内，以**锁定份额**与**除数**计算：
 
 $$
-I_t = \frac{\sum_{i\in C} AS_i^{(r)}\cdot P_{i,t}}{D}
+I_t = \frac{\sum_{i\in C} AS_i^{(r,nat)}\cdot P_{i,t}}{D}
 $$
 
 * $C$：本次再平衡的成分集合
 * $D$：再平衡时刻对应的除数
-* $AS_i^{(r)}$：资产 $i$ 在再平衡基点 $r$ 取各成分的**流通供应量快照**并锁定，记为：
+* $AS_i^{(r,nat)}$：资产 $i$ 在再平衡基点 $r$ 取各成分的**自然自由流通供应量快照**并锁定，记为：
 
 $$
-AS_i^{(r)} \equiv Q_{i,r},
+AS_i^{(r,nat)} \equiv Q_{i,r},
 \qquad t\in[r, r_{\text{next}}) \text{ 期间保持不变。}
 $$
 
@@ -97,8 +97,8 @@ $$
 
 $$
 D_{\text{initial}}
-=\frac{\sum_{i\in C_{t_0}} AS_{i,t_0}\cdot P_{i,t_0}}{1000}
-=\frac{\sum_{i\in C_{t_0}} AS_{i,t_0}\cdot P_{i,t_0}}{I_{t_0}}
+=\frac{\sum_{i\in C_{t_0}} AS_i^{(t_0,nat)}\cdot P_{i,t_0}}{1000}
+=\frac{\sum_{i\in C_{t_0}} AS_i^{(t_0,nat)}\cdot P_{i,t_0}}{I_{t_0}}
 $$
 
 ### 5.6 再平衡时除数 $D$ 的调整
@@ -109,35 +109,48 @@ $$
 I_r \coloneqq I_{r^-}, \qquad P_{i,r}\coloneqq P_{i,r^-}
 $$
 
+- $I_r$：本次再平衡时刻后一瞬间的指数点
+- $I_{r-}$：本次再平衡时刻前一瞬间的指数点
+- $P_{i,r}$：资产 $i$ 在本次再平衡时刻后一瞬间的USD价格。
+- $P_{i,r-}$：资产 $i$ 在本次再平衡时刻前一瞬间的USD价格。
+
 于是
 
 $$
-I_{r^-}=\frac{\sum_{i\in C_{\text{old}}} AS_i^{(r^-)}P_{i,r}}{D_{\text{old}}},\qquad
-I_{r}=\frac{\sum_{i\in C_{\text{new}}} AS_i^{(r)}P_{i,r}}{D_{\text{new}}}
+I_{r^-}=\frac{\sum_{i\in C_{\text{old}}} AS_i^{(r^-,nat)}P_{i,r}}{D_{\text{old}}},\qquad
+I_{r}=\frac{\sum_{i\in C_{\text{new}}} AS_i^{(r,nat)}P_{i,r}}{D_{\text{new}}}
 $$
+
+- $AS_i^{(r,nat)}$：资产 $i$ 在本次再平衡基点的自然自由流通供应量快照
+- $AS_i^{(r-,nat)}$：资产 $i$ 在前次再平衡基点的自然自由流通供应量快照
 
 令 $I_r=I_{r^-}$ 可得“比值法”：
 
 $$
 D_{\text{new}}
 = D_{\text{old}}\cdot
-\frac{\sum_{i\in C_{\text{new}}} AS_i^{(r)}P_{i,r}}
-{\sum_{i\in C_{\text{old}}} AS_i^{(r^-)}P_{i,r}}
+\frac{\sum_{i\in C_{\text{new}}} AS_i^{(r,nat)}P_{i,r}}
+{\sum_{i\in C_{\text{old}}} AS_i^{(r^-,nat)}P_{i,r}}
 $$
 
 或由定义直接得到：
 
 $$
 D_{\text{new}}
-=\frac{\sum_{i\in C_{\text{new}}} AS_i^{(r)}P_{i,r}}{I_r}
+=\frac{\sum_{i\in C_{\text{new}}} AS_i^{(r,nat)}P_{i,r}}{I_r}
 $$
+
+- $D_{\text{old}}$：前次再平衡的除数
+- $D_{\text{new}}$：本次再平衡的除数
+- $C_{\text{old}}$：前次再平衡的成分集合
+- $C_{\text{new}}$：本次再平衡的成分集合
 
 ### 5.7 指数计算方法论
 
 对任一再平衡时刻 $r$ 都有
 
 $$
-D=\frac{\sum_{i\in C} AS_i^{(r)}P_{i,r}}{I_r},
+D=\frac{\sum_{i\in C} AS_i^{(r,nat)}P_{i,r}}{I_r},
 $$
 
 从而 5.5 的初始定标（取 $r=t_0$）与 5.6 的再平衡接平在同一表达式下统一。
@@ -145,28 +158,28 @@ $$
 代入指数计算公式
 
 $$
-I_t=\frac{\sum_{i\in C} AS_i^{(r)}\cdot P_{i,t}}{D}
+I_t=\frac{\sum_{i\in C} AS_i^{(r,nat)}\cdot P_{i,t}}{D}
 $$
 
 可得
 
 $$
 I_t
-= \frac{\sum_{i\in C} AS_i^{(r)} P_{i,t}}
-{\dfrac{\sum_{j\in C} AS_j^{(r)} P_{j,r}}{I_r}}\
+= \frac{\sum_{i\in C} AS_i^{(r,nat)} P_{i,t}}
+{\dfrac{\sum_{j\in C} AS_j^{(r,nat)} P_{j,r}}{I_r}}\
 = I_r \cdot
-\frac{\sum_{i\in C} AS_i^{(r)} P_{i,t}}
-{\sum_{j\in C} AS_j^{(r)} P_{j,r}}\
+\frac{\sum_{i\in C} AS_i^{(r,nat)} P_{i,t}}
+{\sum_{j\in C} AS_j^{(r,nat)} P_{j,r}}\
 = I_r \cdot
-\sum_{i\in C}\frac{AS_i^{(r)} P_{i,t}}{\sum_{j\in C} AS_j^{(r)} P_{j,r}}
+\sum_{i\in C}\frac{AS_i^{(r,nat)} P_{i,t}}{\sum_{j\in C} AS_j^{(r,nat)} P_{j,r}}
 $$
 
 对分子逐项同时除以基期价格 $P_{i,r}$：
 
 $$
-AS_i^{(r)} P_{i,t}
-= AS_i^{(r)}\left(P_{i,r}\cdot \frac{P_{i,t}}{P_{i,r}}\right)\
-= \underbrace{\big(AS_i^{(r)} P_{i,r}\big)}_{\text{基期的流通市值}}
+AS_i^{(r,nat)} P_{i,t}
+= AS_i^{(r,nat)}\left(P_{i,r}\cdot \frac{P_{i,t}}{P_{i,r}}\right)\
+= \underbrace{\big(AS_i^{(r,nat)} P_{i,r}\big)}_{\text{基期的流通市值}}
 \cdot
 \underbrace{\frac{P_{i,t}}{P_{i,r}}}_{\text{价格收益}}
 $$
@@ -176,9 +189,9 @@ $$
 $$
 I_t
 = I_r \cdot
-\sum_{i\in C}\frac{\left(AS_i^{(r)} P_{i,r}\right)\cdot \frac{P_{i,t}}{P_{i,r}}}{\sum_{j\in C} AS_j^{(r)} P_{j,r}}\
+\sum_{i\in C}\frac{\left(AS_i^{(r,nat)} P_{i,r}\right)\cdot \frac{P_{i,t}}{P_{i,r}}}{\sum_{j\in C} AS_j^{(r,nat)} P_{j,r}}\
 = I_r \cdot \sum_{i\in C}
-\underbrace{\frac{AS_i^{(r)}P_{i,r}}{\sum_{j\in C} AS_j^{(r)}P_{j,r}}}_{w_i^{(r)}}
+\underbrace{\frac{AS_i^{(r,nat)}P_{i,r}}{\sum_{j\in C} AS_j^{(r,nat)}P_{j,r}}}_{w_i^{(r,nat)}}
 \cdot
 \underbrace{\frac{P_{i,t}}{P_{i,r}}}_{\text{价格收益}}
 $$
@@ -186,17 +199,17 @@ $$
 令
 
 $$
-w_i^{(r)}=\frac{AS_i^{(r)}P_{i,r}}{\sum_{j\in C}AS_j^{(r)}P_{j,r}},
-\qquad \sum_{i\in C} w_i^{(r)}=1
+w_i^{(r)}=\frac{AS_i^{(r,nat)}P_{i,r}}{\sum_{j\in C}AS_j^{(r,nat)}P_{j,r}},
+\qquad \sum_{i\in C} w_i^{(r,nat)}=1
 $$
 
 则
 
 $$
-I_t = I_r \cdot \sum_{i\in C} w_i^{(r)} \cdot \frac{P_{i,t}}{P_{i,r}}
+I_t = I_r \cdot \sum_{i\in C} w_i^{(r,nat)} \cdot \frac{P_{i,t}}{P_{i,r}}
 $$
 
-> 解释：指数等于**基期点位**乘以**加权价格变化**；此处 $w_i^{(r)}$ 为再平衡基点的**自然权重**。
+> 解释：指数等于**基期点位**乘以**加权价格变化**；此处 $w_i^{(r,nat)}$ 为再平衡基点的**自然权重**。
 
 ## 6. 权重与约束规则
 
