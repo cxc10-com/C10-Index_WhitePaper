@@ -1,4 +1,4 @@
-# C10 Index 加权加密货币指数 — 白皮书（v1.5）
+# C10 Index 加权加密货币指数 — 白皮书（v1.6）
 
 **日期**：2025-10-18
 **发起方**：CXC10
@@ -199,7 +199,7 @@ $$
 令
 
 $$
-w_i^{(r)}=\frac{AS_i^{(r,nat)}P_{i,r}}{\sum_{j\in C}AS_j^{(r,nat)}P_{j,r}},
+w_i^{(r,nat)}=\frac{AS_i^{(r,nat)}P_{i,r}}{\sum_{j\in C}AS_j^{(r,nat)}P_{j,r}},
 \qquad \sum_{i\in C} w_i^{(r,nat)}=1
 $$
 
@@ -213,15 +213,106 @@ $$
 
 ## 6. 权重与约束规则
 
-采用**自由流通市值加权（Free-Float MCAP）**并施加约束：
+采用 **自由流通市值加权(Free-Float MCAP)** 并施加约束。
 
-1. **单一资产上限：50%**
-   若 (w_i^{\text{nat}}>50%)，设 (w_i'=50%)，将超额 (\bigl(w_i^{\text{nat}}-50%\bigr)) 按未触顶集合的自然权重比例分配；若新触顶则迭代，直至全部 (\le 50%)。
+### 6.1 符号与前置
 
-2. **归一化**
-   约束后进行归一化，得有效权重 (w_i^{(\text{eff})}=w_i'/\sum_j w_j')。
+* $C$：本次再平衡的成分集合； $r$：再平衡生效时刻； $t\in[r, r_{\text{next}})$。
+* $Q_{i,r}$：成分 $i$ 在 $r$ 的**自由流通供应量快照**。
+* $P_{i,r}$、 $P_{i,t}$：成分 $i$ 的价格。
+* $AS_i^{(r,nat)}$：资产 $i$ 在本次再平衡基点的自然自由流通供应量快照
+* $AS_i^{(r,cap)}$：资产 $i$ 在本次再平衡基点的约束自由流通供应量快照
+* $I_r$：指数在 $r$ 的点位； $D$：对应除数。
 
-> 注：在引入约束后，可在再平衡基点通过更新锁定份额以复制 (w_i^{(\text{eff})})；接下来一整期内份额不再变化，指数仅随价格波动。
+### 6.2 自然权重  $w_i^{\mathrm{nat}}$
+
+根据未施加约束的自然自由流通供应量快照（ $AS_i^{(r,nat)}\equiv Q_{i,r}$ ）得到当期自然权重：
+
+$$
+w_i^{(r,nat)}=\frac{AS_i^{(r,nat)}P_{i,r}}{\sum_{j\in C}AS_j^{(r,nat)}P_{j,r}},
+\qquad \sum_{i\in C} w_i^{(r,nat)}=1
+$$
+
+### 6.3 施加50% 上限与迭代再分配得到约束权重 $w_i^{\mathrm{cap}}$
+
+对自然权重施加单一资产上限 50%，并将超额按未触顶成分的自然权重比例分配，必要时迭代直至全部 $\le 50$%。
+
+定义触顶集合 $O={i\mid w_i^{\mathrm{nat}}\ge 50}$%，未触顶集合 $U=C\setminus O$。
+
+定义超额总量：  
+
+$$
+E=\sum_{i\in O}\bigl(w_i^{\mathrm{nat}}-50％\bigr)
+$$
+
+则约束权重：
+
+$$
+w_i^{\mathrm{cap}} =
+\begin{cases}
+50％,& i \in O,\\
+w_i^{\mathrm{nat}} +
+\dfrac{w_i^{\mathrm{nat}}}{\displaystyle\sum_{k\in U} w_k^{\mathrm{nat}}}E, & i \in U.
+\end{cases}
+$$
+  
+若有新的 $w_i^{\mathrm{cap}}>50\%$，更新 $O,U,E$ 并重复上式直至收敛。数值上如有微小累积误差，可作一次归一化使 $\sum_i w_i^{\mathrm{cap}}=1$。
+
+### 6.4 归一化使 $\sum_i w_i^{\mathrm{cap}}=1$
+
+经过6.3节计算，得到一组暂态约束权重 $\widehat{w}_i$，其中
+- 对触顶集合 $O$： $\widehat{w}_i\le 50\%$ 且通常 $\widehat{w}_i=50$%；
+- 对未触顶集合 $U$： $\widehat{w}_i<50$%。
+
+由于数值误差， $\sum_i \widehat{w}_i$ 可能不等于 1。为既精确合计为 1又不破坏上限，只对U集合做等比缩放、保持O集合不变。
+
+给定
+
+$$
+\sum_i w_i^{\text{cap}} = S_O + \alpha S_U = 1
+$$
+
+ 其中
+
+$$  
+S_O = \sum_{i\in O} \widehat{w}_i,\qquad  
+S_U = \sum_{i\in U} \widehat{w}_i
+$$
+
+得到
+
+$$
+\alpha = \frac{1 - S_O}{S_U}
+$$
+
+所以
+
+$$
+w_i^{\mathrm{cap}} =
+\begin{cases}
+50％, & i \in O,\\
+\alpha\widehat{w}_i, & i \in U.
+\end{cases}
+$$
+
+### 6.5 关于 $AS_i^{(nat)}$更新为 $AS_i^{(cap)}$
+
+为引入50%单一资产上限并在基点 $r$ 精确复制该约束后的约束权重，我们在 $r$ 时对 $AS_i^{(nat)}$作一次性更新为 $AS_i^{(cap)}$；其后份额在整个区间 $[r, r_{\text{next}})$ 保持不变，指数仅随价格波动。 
+
+$$
+AS_i^{(r,cap)} =
+\begin{cases}
+AS_i^{(r,nat)}\times
+\underbrace{\dfrac{w_i^{(r,cap)}}{w_i^{(r,nat)}}}_{\gamma_i\;\text{（权重修正系数）}}, & w_i^{(r,nat)}>0,\\
+0, & w_i^{(r,nat)}=0.
+\end{cases}
+$$
+
+### 6.6 修正后的指数计算公式
+
+$$
+I_t = I_r \cdot \sum_{i\in C} w_i^{(r,cap)} \cdot \frac{P_{i,t}}{P_{i,r}}
+$$
 
 ## 7. 发布频率
 
