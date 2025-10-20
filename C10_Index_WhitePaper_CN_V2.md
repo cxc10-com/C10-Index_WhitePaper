@@ -366,25 +366,25 @@ $$
 自然权重（由当刻自由流通市值）：
 
 * **BTC**:
-    - $\displaystyle \frac{2155694976689.5984}{3200565092014.6787} = 0.6735357396942176$
+    * $\displaystyle \frac{2155694976689.5984}{3200565092014.6787} = 0.6735357396942176$
 * **ETH**:
-    - $\displaystyle \frac{529740073153.04834}{3200565092014.6787} = 0.16551454443927266$
+    * $\displaystyle \frac{529740073153.04834}{3200565092014.6787} = 0.16551454443927266$
 * **XRP**:
-    - $\displaystyle \frac{165199510162.63672}{3200565092014.6787} = 0.05161573203894679$
+    * $\displaystyle \frac{165199510162.63672}{3200565092014.6787} = 0.05161573203894679$
 * **BNB**:
-    - $\displaystyle \frac{119395441256.787}{3200565092014.6787} = 0.03730448774645306$
+    * $\displaystyle \frac{119395441256.787}{3200565092014.6787} = 0.03730448774645306$
 * **SOL**:
-    - $\displaystyle \frac{108641493698.23296}{3200565092014.6787} = 0.033944472483715606$
+    * $\displaystyle \frac{108641493698.23296}{3200565092014.6787} = 0.033944472483715606$
 * **TRX**:
-    - $\displaystyle \frac{32256431725.30664}{3200565092014.6787} = 0.010078355164775604$
+    * $\displaystyle \frac{32256431725.30664}{3200565092014.6787} = 0.010078355164775604$
 * **DOGE**:
-    - $\displaystyle \frac{32224320280.031105}{3200565092014.6787} = 0.01006832210987675$
+    * $\displaystyle \frac{32224320280.031105}{3200565092014.6787} = 0.01006832210987675$
 * **ADA**:
-    - $\displaystyle \frac{29618687472.74614}{3200565092014.6787} = 0.009254205623451917$
+    * $\displaystyle \frac{29618687472.74614}{3200565092014.6787} = 0.009254205623451917$
 * **LINK**:
-    - $\displaystyle \frac{15774709649.672829}{3200565092014.6787} = 0.004928726395545053$
+    * $\displaystyle \frac{15774709649.672829}{3200565092014.6787} = 0.004928726395545053$
 * **HYPE**:
-    - $\displaystyle \frac{12019447926.61887}{3200565092014.6787} = 0.0037554143037450043$
+    * $\displaystyle \frac{12019447926.61887}{3200565092014.6787} = 0.0037554143037450043$
 
 $$
 \sum_j \text{MarketCap}_{j,9/1}=3200565092014.6787
@@ -416,43 +416,43 @@ $$
 逐项计算：
 
 * **BTC**:
-    - $w_{\text{BTC}}^{\mathrm{cap}} = 0.5$
+    * $w_{\text{BTC}}^{\mathrm{cap}} = 0.5$
 * **ETH**:
-    - $\displaystyle \alpha=\dfrac{0.16551454443927266}{0.32646426030578235}=0.5069913144068011$
-    - $\displaystyle \Delta=0.17353573969421765\times 0.5069913144068011=0.0879811127641279$
-    - $\displaystyle w_{\text{ETH}}^{\mathrm{cap}}=0.16551454443927266+0.0879811127641279=0.25349565720340056$
+    * $\displaystyle \alpha=\dfrac{0.16551454443927266}{0.32646426030578235}=0.5069913144068011$
+    * $\displaystyle \Delta=0.17353573969421765\times 0.5069913144068011=0.0879811127641279$
+    * $\displaystyle w_{\text{ETH}}^{\mathrm{cap}}=0.16551454443927266+0.0879811127641279=0.25349565720340056$
 * **XRP**:
-    - $\displaystyle \alpha=\dfrac{0.05161573203894679}{0.32646426030578235}=0.1581053068124547$
-    - $\displaystyle \Delta=0.17353573969421765\times 0.1581053068124547=0.027436921367280553$
-    - $\displaystyle w_{\text{XRP}}^{\mathrm{cap}}=0.05161573203894679+0.027436921367280553=0.07905265340622734$
+    * $\displaystyle \alpha=\dfrac{0.05161573203894679}{0.32646426030578235}=0.1581053068124547$
+    * $\displaystyle \Delta=0.17353573969421765\times 0.1581053068124547=0.027436921367280553$
+    * $\displaystyle w_{\text{XRP}}^{\mathrm{cap}}=0.05161573203894679+0.027436921367280553=0.07905265340622734$
 * **BNB**:
-    - $\displaystyle \alpha=\dfrac{0.03730448774645306}{0.32646426030578235}=0.11426821334596277$
-    - $\displaystyle \Delta=0.17353573969421765\times 0.11426821334596277=0.019829618926528323$
-    - $\displaystyle w_{\text{BNB}}^{\mathrm{cap}}=0.03730448774645306+0.019829618926528323=0.05713410667298138$
+    * $\displaystyle \alpha=\dfrac{0.03730448774645306}{0.32646426030578235}=0.11426821334596277$
+    * $\displaystyle \Delta=0.17353573969421765\times 0.11426821334596277=0.019829618926528323$
+    * $\displaystyle w_{\text{BNB}}^{\mathrm{cap}}=0.03730448774645306+0.019829618926528323=0.05713410667298138$
 * **SOL**:
-    - $\displaystyle \alpha=\dfrac{0.033944472483715606}{0.32646426030578235}=0.10397607521240321$
-    - $\displaystyle \Delta=0.17353573969421765\times 0.10397607521240321=0.018043565122485998$
-    - $\displaystyle w_{\text{SOL}}^{\mathrm{cap}}=0.033944472483715606+0.018043565122485998=0.051988037606201604$
+    * $\displaystyle \alpha=\dfrac{0.033944472483715606}{0.32646426030578235}=0.10397607521240321$
+    * $\displaystyle \Delta=0.17353573969421765\times 0.10397607521240321=0.018043565122485998$
+    * $\displaystyle w_{\text{SOL}}^{\mathrm{cap}}=0.033944472483715606+0.018043565122485998=0.051988037606201604$
 * **TRX**:
-    - $\displaystyle \alpha=\dfrac{0.010078355164775604}{0.32646426030578235}=0.030871235814100215$
-    - $\displaystyle \Delta=0.17353573969421765\times 0.030871235814100215=0.005357262742274504$
-    - $\displaystyle w_{\text{TRX}}^{\mathrm{cap}}=0.010078355164775604+0.005357262742274504=0.015435617907050107$
+    * $\displaystyle \alpha=\dfrac{0.010078355164775604}{0.32646426030578235}=0.030871235814100215$
+    * $\displaystyle \Delta=0.17353573969421765\times 0.030871235814100215=0.005357262742274504$
+    * $\displaystyle w_{\text{TRX}}^{\mathrm{cap}}=0.010078355164775604+0.005357262742274504=0.015435617907050107$
 * **DOGE**:
-    - $\displaystyle \alpha=\dfrac{0.01006832210987675}{0.32646426030578235}=0.030840503338546977$
-    - $\displaystyle \Delta=0.17353573969421765\times 0.030840503338546977=0.005351929559396738$
-    - $\displaystyle w_{\text{DOGE}}^{\mathrm{cap}}=0.01006832210987675+0.005351929559396738=0.015420251669273487$
+    * $\displaystyle \alpha=\dfrac{0.01006832210987675}{0.32646426030578235}=0.030840503338546977$
+    * $\displaystyle \Delta=0.17353573969421765\times 0.030840503338546977=0.005351929559396738$
+    * $\displaystyle w_{\text{DOGE}}^{\mathrm{cap}}=0.01006832210987675+0.005351929559396738=0.015420251669273487$
 * **ADA**:
-    - $\displaystyle \alpha=\dfrac{0.009254205623451917}{0.32646426030578235}=0.0283467648641967$
-    - $\displaystyle \Delta=0.17353573969421765\times 0.0283467648641967=0.004919176808646434$
-    - $\displaystyle w_{\text{ADA}}^{\mathrm{cap}}=0.009254205623451917+0.004919176808646434=0.01417338243209835$
+    * $\displaystyle \alpha=\dfrac{0.009254205623451917}{0.32646426030578235}=0.0283467648641967$
+    * $\displaystyle \Delta=0.17353573969421765\times 0.0283467648641967=0.004919176808646434$
+    * $\displaystyle w_{\text{ADA}}^{\mathrm{cap}}=0.009254205623451917+0.004919176808646434=0.01417338243209835$
 * **LINK**:
-    - $\displaystyle \alpha=\dfrac{0.004928726395545053}{0.32646426030578235}=0.015097292398648989$
-    - $\displaystyle \Delta=0.17353573969421765\times 0.015097292398648989=0.002619919803779442$
-    - $\displaystyle w_{\text{LINK}}^{\mathrm{cap}}=0.004928726395545053+0.002619919803779442=0.007548646199324495$
+    * $\displaystyle \alpha=\dfrac{0.004928726395545053}{0.32646426030578235}=0.015097292398648989$
+    * $\displaystyle \Delta=0.17353573969421765\times 0.015097292398648989=0.002619919803779442$
+    * $\displaystyle w_{\text{LINK}}^{\mathrm{cap}}=0.004928726395545053+0.002619919803779442=0.007548646199324495$
 * **HYPE**:
-    - $\displaystyle \alpha=\dfrac{0.0037554143037450043}{0.32646426030578235}=0.01150329380688563$
-    - $\displaystyle \Delta=0.17353573969421765\times 0.01150329380688563=0.0019962325996978106$
-    - $\displaystyle w_{\text{HYPE}}^{\mathrm{cap}}=0.0037554143037450043+0.0019962325996978106=0.0057516469034428145$
+    * $\displaystyle \alpha=\dfrac{0.0037554143037450043}{0.32646426030578235}=0.01150329380688563$
+    * $\displaystyle \Delta=0.17353573969421765\times 0.01150329380688563=0.0019962325996978106$
+    * $\displaystyle w_{\text{HYPE}}^{\mathrm{cap}}=0.0037554143037450043+0.0019962325996978106=0.0057516469034428145$
 
 校验求和：
 
@@ -502,25 +502,25 @@ $$
 逐项归一化结果（完整小数）：
 
 * **BTC**:
-  - $\displaystyle \widehat{w}^{9/1}_{\text{BTC}} = \mathbf{0.5}$
+  * $\displaystyle \widehat{w}^{9/1}_{\text{BTC}} = \mathbf{0.5}$
 * **ETH**:
-  - $\displaystyle \widehat{w}^{9/1}_{\text{ETH}}\times \alpha = 0.25349565720340056 \times 0.9999999999999996 = \mathbf{0.25349565720340045}$
+  * $\displaystyle \widehat{w}^{9/1}_{\text{ETH}}\times \alpha = 0.25349565720340056 \times 0.9999999999999996 = \mathbf{0.25349565720340045}$
 * **XRP**:
-  - $\displaystyle \widehat{w}^{9/1}_{\text{XRP}}\times \alpha = 0.07905265340622734 \times 0.9999999999999996 = \mathbf{0.0790526534062273}$
+  * $\displaystyle \widehat{w}^{9/1}_{\text{XRP}}\times \alpha = 0.07905265340622734 \times 0.9999999999999996 = \mathbf{0.0790526534062273}$
 * **BNB**:
-  - $\displaystyle \widehat{w}^{9/1}_{\text{BNB}}\times \alpha = 0.05713410667298138 \times 0.9999999999999996 = \mathbf{0.057134106672981355}$
+  * $\displaystyle \widehat{w}^{9/1}_{\text{BNB}}\times \alpha = 0.05713410667298138 \times 0.9999999999999996 = \mathbf{0.057134106672981355}$
 * **SOL**:
-  - $\displaystyle \widehat{w}^{9/1}_{\text{SOL}}\times \alpha = 0.051988037606201604 \times 0.9999999999999996 = \mathbf{0.05198803760620158}$
+  * $\displaystyle \widehat{w}^{9/1}_{\text{SOL}}\times \alpha = 0.051988037606201604 \times 0.9999999999999996 = \mathbf{0.05198803760620158}$
 * **TRX**:
-  - $\displaystyle \widehat{w}^{9/1}_{\text{TRX}}\times \alpha = 0.015435617907050107 \times 0.9999999999999996 = \mathbf{0.0154356179070501}$
+  * $\displaystyle \widehat{w}^{9/1}_{\text{TRX}}\times \alpha = 0.015435617907050107 \times 0.9999999999999996 = \mathbf{0.0154356179070501}$
 * **DOGE**:
-  - $\displaystyle \widehat{w}^{9/1}_{\text{DOGE}}\times \alpha = 0.015420251669273487 \times 0.9999999999999996 = \mathbf{0.01542025166927348}$
+  * $\displaystyle \widehat{w}^{9/1}_{\text{DOGE}}\times \alpha = 0.015420251669273487 \times 0.9999999999999996 = \mathbf{0.01542025166927348}$
 * **ADA**:
-  - $\displaystyle \widehat{w}^{9/1}_{\text{ADA}}\times \alpha = 0.01417338243209835 \times 0.9999999999999996 = \mathbf{0.014173382432098343}$
+  * $\displaystyle \widehat{w}^{9/1}_{\text{ADA}}\times \alpha = 0.01417338243209835 \times 0.9999999999999996 = \mathbf{0.014173382432098343}$
 * **LINK**:
-  - $\displaystyle \widehat{w}^{9/1}_{\text{LINK}}\times \alpha = 0.007548646199324495 \times 0.9999999999999996 = \mathbf{0.007548646199324492}$
+  * $\displaystyle \widehat{w}^{9/1}_{\text{LINK}}\times \alpha = 0.007548646199324495 \times 0.9999999999999996 = \mathbf{0.007548646199324492}$
 * **HYPE**:
-  - $\displaystyle \widehat{w}^{9/1}_{\text{HYPE}}\times \alpha = 0.0057516469034428145 \times 0.9999999999999996 = \mathbf{0.005751646903442812}$
+  * $\displaystyle \widehat{w}^{9/1}_{\text{HYPE}}\times \alpha = 0.0057516469034428145 \times 0.9999999999999996 = \mathbf{0.005751646903442812}$
 
 
 归一化校验（构造上精确满足）：
@@ -534,8 +534,96 @@ $$
 
 > 说明：这样处理严格满足"BTC=50% 不变"的设限，同时把其余成分按同一系数 $\alpha$ 等比缩放，使总权重精确为 1。
 
+#### 12.2.4 9/1收盘指数计算
 
-#### 12.2.4 9/30指数计算示例
+公式
+
+$$
+I_{9/1}
+= I_{9/1}\cdot \sum_{i\in C_{9/1}} w_i^{(9/1,\mathrm{cap})}\cdot
+\frac{P_{i,\mathbf{9/2}}}{P_{i,\mathbf{9/1}}},\qquad
+I_{9/1}=1000.
+$$
+
+> 注：**“9/1 收盘价”= 9/2 00:00 UTC**；下列每条都按你喜欢的三行风格：给出**权重**、**价比（分子/分母）**，以及**分项贡献** ($w\times\frac{P_{9/2}}{P_{9/1}}$)。价格来自你提供的 CSV。
+
+* **BTC**:
+  * $\displaystyle w_{\text{BTC}}^{(9/1,\mathrm{cap})}=0.5$
+  * $\displaystyle \frac{P_{\text{BTC},9/2}}{P_{\text{BTC},9/1}}
+    =\frac{\mathbf{109162.68557992298}}{\mathbf{108253.36092385623}}
+    =\mathbf{1.0083999669692136}$
+  * $\displaystyle w\times\frac{P_{9/2}}{P_{9/1}}=\mathbf{0.5041999834846068}$
+* **ETH**:
+  * $\displaystyle w_{\text{ETH}}^{(9/1,\mathrm{cap})}=0.25349565720340045$
+  * $\displaystyle \frac{P_{\text{ETH},9/2}}{P_{\text{ETH},9/1}}
+    =\frac{\mathbf{4303.202222745541}}{\mathbf{4388.931464519364}}
+    =\mathbf{0.9804669445246825}$
+  * $\displaystyle w\times\frac{P_{9/2}}{P_{9/1}}=\mathbf{0.24854411246849437}$
+* **XRP**:
+  * $\displaystyle w_{\text{XRP}}^{(9/1,\mathrm{cap})}=0.0790526534062273$
+  * $\displaystyle \frac{P_{\text{XRP},9/2}}{P_{\text{XRP},9/1}}
+    =\frac{\mathbf{2.752094842681695}}{\mathbf{2.776712609891609}}
+    =\mathbf{0.9901280646537916}$
+  * $\displaystyle w\times\frac{P_{9/2}}{P_{9/1}}=\mathbf{0.07827852787876354}$
+* **BNB**:
+  * $\displaystyle w_{\text{BNB}}^{(9/1,\mathrm{cap})}=0.057134106672981355$
+  * $\displaystyle \frac{P_{\text{BNB},9/2}}{P_{\text{BNB},9/1}}
+    =\frac{\mathbf{1005.574831704243}}{\mathbf{1002.251682003274}}
+    =\mathbf{1.0033150266045858}$
+  * $\displaystyle w\times\frac{P_{9/2}}{P_{9/1}}=\mathbf{0.05732380867156660}$
+* **SOL**:
+  * $\displaystyle w_{\text{SOL}}^{(9/1,\mathrm{cap})}=0.05198803760620158$
+  * $\displaystyle \frac{P_{\text{SOL},9/2}}{P_{\text{SOL},9/1}}
+    =\frac{\mathbf{197.66270682973027}}{\mathbf{205.12838610102386}}
+    =\mathbf{0.9635576989422688}$
+  * $\displaystyle w\times\frac{P_{9/2}}{P_{9/1}}=\mathbf{0.05007036893063023}$
+* **TRX**:
+  * $\displaystyle w_{\text{TRX}}^{(9/1,\mathrm{cap})}=0.0154356179070501$
+  * $\displaystyle \frac{P_{\text{TRX},9/2}}{P_{\text{TRX},9/1}}
+    =\frac{\mathbf{0.323681332993614}}{\mathbf{0.332362570767100}}
+    =\mathbf{0.9738575385126106}$
+  * $\displaystyle w\times\frac{P_{9/2}}{P_{9/1}}=\mathbf{0.01503470306394761}$
+* **DOGE**:
+  * $\displaystyle w_{\text{DOGE}}^{(9/1,\mathrm{cap})}=0.01542025166927348$
+  * $\displaystyle \frac{P_{\text{DOGE},9/2}}{P_{\text{DOGE},9/1}}
+    =\frac{\mathbf{0.241441506427685}}{\mathbf{0.243231957517967}}
+    =\mathbf{0.9926462740767630}$
+  * $\displaystyle w\times\frac{P_{9/2}}{P_{9/1}}=\mathbf{0.01530754444936604}$
+* **ADA**:
+  * $\displaystyle w_{\text{ADA}}^{(9/1,\mathrm{cap})}=0.014173382432098343$
+  * $\displaystyle \frac{P_{\text{ADA},9/2}}{P_{\text{ADA},9/1}}
+    =\frac{\mathbf{0.803044535123922}}{\mathbf{0.814881556780723}}
+    =\mathbf{0.9853985136344930}$
+  * $\displaystyle w\times\frac{P_{9/2}}{P_{9/1}}=\mathbf{0.013959113371730603}$
+* **LINK**:
+  * $\displaystyle w_{\text{LINK}}^{(9/1,\mathrm{cap})}=0.007548646199324492$
+  * $\displaystyle \frac{P_{\text{LINK},9/2}}{P_{\text{LINK},9/1}}
+    =\frac{\mathbf{22.440918059371164}}{\mathbf{23.229075217478396}}
+    =\mathbf{0.9660702309184399}$
+  * $\displaystyle w\times\frac{P_{9/2}}{P_{9/1}}=\mathbf{0.007292522376903016}$
+* **HYPE**:
+  * $\displaystyle w_{\text{HYPE}}^{(9/1,\mathrm{cap})}=0.005751646903442812$
+  * $\displaystyle \frac{P_{\text{HYPE},9/2}}{P_{\text{HYPE},9/1}}
+    =\frac{\mathbf{43.030960057683984}}{\mathbf{44.30452855074537}}
+    =\mathbf{0.9712542140787556}$
+  * $\displaystyle w\times\frac{P_{9/2}}{P_{9/1}}=\mathbf{0.005586311292861857}$
+
+求和与指数：
+
+$$
+\sum_i w_i^{(9/1,\mathrm{cap})}\cdot\frac{P_{i,9/2}}{P_{i,9/1}}
+=\mathbf{0.9956529534972314797927243825},
+$$
+
+$$
+I_{9/1}
+=1000\times \mathbf{0.9956529534972314798}
+=\boxed{\mathbf{995.6529534972315}}.
+$$
+
+> 解释：这是 **9/1 一天的收盘指数**（区间 9/01 00:00 → 9/02 00:00，UTC），**沿用 9/1 权重**按“收盘/开盘”的线性相对法滚动得到的数值。
+
+#### 12.2.5 9/30开盘指数计算
 
 $$
 I_{9/30} = I_{9/1}\cdot \sum_{i\in C_{9/1}} w_i^{(9/1,\mathrm{cap})} \cdot \frac{P_{i,9/30}}{P_{i,9/1}},
@@ -545,45 +633,45 @@ $$
 逐项计算：
 
 * **BTC**:
-    - $\displaystyle w_{\text{BTC}}^{(9/1,\mathrm{cap})}=0.5$
-    - $\displaystyle \frac{P_{\text{BTC},9/30}}{P_{\text{BTC},9/1}}=1.0656999579537592$
-    - $\displaystyle w_{\text{BTC}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{BTC},9/30}}{P_{\text{BTC},9/1}}=0.5328499789768796$
+    * $\displaystyle w_{\text{BTC}}^{(9/1,\mathrm{cap})}=0.5$
+    * $\displaystyle \frac{P_{\text{BTC},9/30}}{P_{\text{BTC},9/1}}=1.0656999579537592$
+    * $\displaystyle w_{\text{BTC}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{BTC},9/30}}{P_{\text{BTC},9/1}}=0.5328499789768796$
 * **ETH**:
-    - $\displaystyle w_{\text{ETH}}^{(9/1,\mathrm{cap})}=0.25349565720340045$
-    - $\displaystyle \frac{P_{\text{ETH},9/30}}{P_{\text{ETH},9/1}}=0.9682442169274681$
-    - $\displaystyle w_{\text{ETH}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{ETH},9/30}}{P_{\text{ETH},9/1}}=0.2453837426305934$
+    * $\displaystyle w_{\text{ETH}}^{(9/1,\mathrm{cap})}=0.25349565720340045$
+    * $\displaystyle \frac{P_{\text{ETH},9/30}}{P_{\text{ETH},9/1}}=0.9682442169274681$
+    * $\displaystyle w_{\text{ETH}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{ETH},9/30}}{P_{\text{ETH},9/1}}=0.2453837426305934$
 * **XRP**:
-    - $\displaystyle w_{\text{XRP}}^{(9/1,\mathrm{cap})}=0.0790526534062273$
-    - $\displaystyle \frac{P_{\text{XRP},9/30}}{P_{\text{XRP},9/1}}=1.0603718454102623$
-    - $\displaystyle w_{\text{XRP}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{XRP},9/30}}{P_{\text{XRP},9/1}}=0.0837735300897862$
+    * $\displaystyle w_{\text{XRP}}^{(9/1,\mathrm{cap})}=0.0790526534062273$
+    * $\displaystyle \frac{P_{\text{XRP},9/30}}{P_{\text{XRP},9/1}}=1.0603718454102623$
+    * $\displaystyle w_{\text{XRP}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{XRP},9/30}}{P_{\text{XRP},9/1}}=0.0837735300897862$
 * **BNB**:
-    - $\displaystyle w_{\text{BNB}}^{(9/1,\mathrm{cap})}=0.057134106672981355$
-    - $\displaystyle \frac{P_{\text{BNB},9/30}}{P_{\text{BNB},9/1}}=1.052969779682479$
-    - $\displaystyle w_{\text{BNB}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{BNB},9/30}}{P_{\text{BNB},9/1}}=0.06016145552550259$
+    * $\displaystyle w_{\text{BNB}}^{(9/1,\mathrm{cap})}=0.057134106672981355$
+    * $\displaystyle \frac{P_{\text{BNB},9/30}}{P_{\text{BNB},9/1}}=1.052969779682479$
+    * $\displaystyle w_{\text{BNB}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{BNB},9/30}}{P_{\text{BNB},9/1}}=0.06016145552550259$
 * **SOL**:
-    - $\displaystyle w_{\text{SOL}}^{(9/1,\mathrm{cap})}=0.05198803760620158$
-    - $\displaystyle \frac{P_{\text{SOL},9/30}}{P_{\text{SOL},9/1}}=0.9128546769029791$
-    - $\displaystyle w_{\text{SOL}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{SOL},9/30}}{P_{\text{SOL},9/1}}=0.04746349379864601$
+    * $\displaystyle w_{\text{SOL}}^{(9/1,\mathrm{cap})}=0.05198803760620158$
+    * $\displaystyle \frac{P_{\text{SOL},9/30}}{P_{\text{SOL},9/1}}=0.9128546769029791$
+    * $\displaystyle w_{\text{SOL}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{SOL},9/30}}{P_{\text{SOL},9/1}}=0.04746349379864601$
 * **TRX**:
-    - $\displaystyle w_{\text{TRX}}^{(9/1,\mathrm{cap})}=0.0154356179070501$
-    - $\displaystyle \frac{P_{\text{TRX},9/30}}{P_{\text{TRX},9/1}}=1.1500976402157438$
-    - $\displaystyle w_{\text{TRX}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{TRX},9/30}}{P_{\text{TRX},9/1}}=0.017756977238165353$
+    * $\displaystyle w_{\text{TRX}}^{(9/1,\mathrm{cap})}=0.0154356179070501$
+    * $\displaystyle \frac{P_{\text{TRX},9/30}}{P_{\text{TRX},9/1}}=1.1500976402157438$
+    * $\displaystyle w_{\text{TRX}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{TRX},9/30}}{P_{\text{TRX},9/1}}=0.017756977238165353$
 * **DOGE**:
-    - $\displaystyle w_{\text{DOGE}}^{(9/1,\mathrm{cap})}=0.01542025166927348$
-    - $\displaystyle \frac{P_{\text{DOGE},9/30}}{P_{\text{DOGE},9/1}}=1.0734781344083375$
-    - $\displaystyle w_{\text{DOGE}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{DOGE},9/30}}{P_{\text{DOGE},9/1}}=0.01655507354864114$
+    * $\displaystyle w_{\text{DOGE}}^{(9/1,\mathrm{cap})}=0.01542025166927348$
+    * $\displaystyle \frac{P_{\text{DOGE},9/30}}{P_{\text{DOGE},9/1}}=1.0734781344083375$
+    * $\displaystyle w_{\text{DOGE}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{DOGE},9/30}}{P_{\text{DOGE},9/1}}=0.01655507354864114$
 * **ADA**:
-    - $\displaystyle w_{\text{ADA}}^{(9/1,\mathrm{cap})}=0.014173382432098343$
-    - $\displaystyle \frac{P_{\text{ADA},9/30}}{P_{\text{ADA},9/1}}=1.0461297326705426$
-    - $\displaystyle w_{\text{ADA}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{ADA},9/30}}{P_{\text{ADA},9/1}}=0.014827671401150925$
+    * $\displaystyle w_{\text{ADA}}^{(9/1,\mathrm{cap})}=0.014173382432098343$
+    * $\displaystyle \frac{P_{\text{ADA},9/30}}{P_{\text{ADA},9/1}}=1.0461297326705426$
+    * $\displaystyle w_{\text{ADA}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{ADA},9/30}}{P_{\text{ADA},9/1}}=0.014827671401150925$
 * **LINK**:
-    - $\displaystyle w_{\text{LINK}}^{(9/1,\mathrm{cap})}=0.007548646199324492$
-    - $\displaystyle \frac{P_{\text{LINK},9/30}}{P_{\text{LINK},9/1}}=1.373638327995165$
-    - $\displaystyle w_{\text{LINK}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{LINK},9/30}}{P_{\text{LINK},9/1}}=0.01037211518884679$
+    * $\displaystyle w_{\text{LINK}}^{(9/1,\mathrm{cap})}=0.007548646199324492$
+    * $\displaystyle \frac{P_{\text{LINK},9/30}}{P_{\text{LINK},9/1}}=1.373638327995165$
+    * $\displaystyle w_{\text{LINK}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{LINK},9/30}}{P_{\text{LINK},9/1}}=0.01037211518884679$
 * **HYPE**:
-    - $\displaystyle w_{\text{HYPE}}^{(9/1,\mathrm{cap})}=0.005751646903442812$
-    - $\displaystyle \frac{P_{\text{HYPE},9/30}}{P_{\text{HYPE},9/1}}=0.9441439931270751$
-    - $\displaystyle w_{\text{HYPE}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{HYPE},9/30}}{P_{\text{HYPE},9/1}}=0.005428415662496389$
+    * $\displaystyle w_{\text{HYPE}}^{(9/1,\mathrm{cap})}=0.005751646903442812$
+    * $\displaystyle \frac{P_{\text{HYPE},9/30}}{P_{\text{HYPE},9/1}}=0.9441439931270751$
+    * $\displaystyle w_{\text{HYPE}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{HYPE},9/30}}{P_{\text{HYPE},9/1}}=0.005428415662496389$
 
 
 求和与指数：
@@ -611,25 +699,25 @@ w_{i}^{(10/1,\mathrm{nat})}
 $$
 
 * **BTC**:
-    - $\displaystyle \frac{2272137555069.45}{3319239718277.4873} = 0.6845355406413887$
+    * $\displaystyle \frac{2272137555069.45}{3319239718277.4873} = 0.6845355406413887$
 * **ETH**:
-    - $\displaystyle \frac{500218841768.296}{3319239718277.4873} = 0.15070283686165445$
+    * $\displaystyle \frac{500218841768.296}{3319239718277.4873} = 0.15070283686165445$
 * **XRP**:
-    - $\displaystyle \frac{170189095368.763}{3319239718277.4873} = 0.05127351737556403$
+    * $\displaystyle \frac{170189095368.763}{3319239718277.4873} = 0.05127351737556403$
 * **BNB**:
-    - $\displaystyle \frac{140376471979.115}{3319239718277.4873} = 0.0422917547069975$
+    * $\displaystyle \frac{140376471979.115}{3319239718277.4873} = 0.0422917547069975$
 * **SOL**:
-    - $\displaystyle \frac{113428586887.754}{3319239718277.4873} = 0.03417306266346365$
+    * $\displaystyle \frac{113428586887.754}{3319239718277.4873} = 0.03417306266346365$
 * **TRX**:
-    - $\displaystyle \frac{31567210788.1807}{3319239718277.4873} = 0.009510373901093964$
+    * $\displaystyle \frac{31567210788.1807}{3319239718277.4873} = 0.009510373901093964$
 * **DOGE**:
-    - $\displaystyle \frac{35172909747.7351}{3319239718277.4873} = 0.010596676568448635$
+    * $\displaystyle \frac{35172909747.7351}{3319239718277.4873} = 0.010596676568448635$
 * **ADA**:
-    - $\displaystyle \frac{29433473473.4856}{3319239718277.4873} = 0.008867534728332318$
+    * $\displaystyle \frac{29433473473.4856}{3319239718277.4873} = 0.008867534728332318$
 * **LINK**:
-    - $\displaystyle \frac{14464939634.1535}{3319239718277.4873} = 0.004357907491436036$
+    * $\displaystyle \frac{14464939634.1535}{3319239718277.4873} = 0.004357907491436036$
 * **HYPE**:
-    - $\displaystyle \frac{12250633560.5548}{3319239718277.4873} = 0.003690795061620991$
+    * $\displaystyle \frac{12250633560.5548}{3319239718277.4873} = 0.003690795061620991$
 
 
 $$
@@ -663,43 +751,43 @@ $$
 逐项计算：
 
 * **BTC**:
-    - $w_{\text{BTC}}^{\mathrm{cap}}=0.5$
+    * $w_{\text{BTC}}^{\mathrm{cap}}=0.5$
 * **ETH**:
-    - $\displaystyle \alpha=\dfrac{0.15070283686165445}{0.31546445935861134}=0.4777173224776475$
-    - $\displaystyle \Delta=0.18453554064138866\times 0.4777173224776475=0.08815582437716929$
-    - $\displaystyle w_{\text{ETH}}^{\mathrm{cap}}=0.15070283686165445+0.08815582437716929=0.23885866123882374$
+    * $\displaystyle \alpha=\dfrac{0.15070283686165445}{0.31546445935861134}=0.4777173224776475$
+    * $\displaystyle \Delta=0.18453554064138866\times 0.4777173224776475=0.08815582437716929$
+    * $\displaystyle w_{\text{ETH}}^{\mathrm{cap}}=0.15070283686165445+0.08815582437716929=0.23885866123882374$
 * **XRP**:
-    - $\displaystyle \alpha=\dfrac{0.05127351737556403}{0.31546445935861134}=0.16253341970696517$
-    - $\displaystyle \Delta=0.18453554064138866\times 0.16253341970696517=0.02999319247791855$
-    - $\displaystyle w_{\text{XRP}}^{\mathrm{cap}}=0.05127351737556403+0.02999319247791855=0.08126670985348258$
+    * $\displaystyle \alpha=\dfrac{0.05127351737556403}{0.31546445935861134}=0.16253341970696517$
+    * $\displaystyle \Delta=0.18453554064138866\times 0.16253341970696517=0.02999319247791855$
+    * $\displaystyle w_{\text{XRP}}^{\mathrm{cap}}=0.05127351737556403+0.02999319247791855=0.08126670985348258$
 * **BNB**:
-    - $\displaystyle \alpha=\dfrac{0.0422917547069975}{0.31546445935861134}=0.13406186799293734$
-    - $\displaystyle \Delta=0.18453554064138866\times 0.13406186799293734=0.024739179289471173$
-    - $\displaystyle w_{\text{BNB}}^{\mathrm{cap}}=0.0422917547069975+0.024739179289471173=0.06703093399646867$
+    * $\displaystyle \alpha=\dfrac{0.0422917547069975}{0.31546445935861134}=0.13406186799293734$
+    * $\displaystyle \Delta=0.18453554064138866\times 0.13406186799293734=0.024739179289471173$
+    * $\displaystyle w_{\text{BNB}}^{\mathrm{cap}}=0.0422917547069975+0.024739179289471173=0.06703093399646867$
 * **SOL**:
-    - $\displaystyle \alpha=\dfrac{0.03417306266346365}{0.31546445935861134}=0.10838724803121264$
-    - $\displaystyle \Delta=0.18453554064138866\times 0.10838724803121264=0.019990031862212612$
-    - $\displaystyle w_{\text{SOL}}^{\mathrm{cap}}=0.03417306266346365+0.019990031862212612=0.05416309452567627$
+    * $\displaystyle \alpha=\dfrac{0.03417306266346365}{0.31546445935861134}=0.10838724803121264$
+    * $\displaystyle \Delta=0.18453554064138866\times 0.10838724803121264=0.019990031862212612$
+    * $\displaystyle w_{\text{SOL}}^{\mathrm{cap}}=0.03417306266346365+0.019990031862212612=0.05416309452567627$
 * **TRX**:
-    - $\displaystyle \alpha=\dfrac{0.009510373901093964}{0.31546445935861134}=0.030137604053342832$
-    - $\displaystyle \Delta=0.18453554064138866\times 0.030137604053342832=0.005563232045563298$
-    - $\displaystyle w_{\text{TRX}}^{\mathrm{cap}}=0.009510373901093964+0.005563232045563298=0.015073605946657262$
+    * $\displaystyle \alpha=\dfrac{0.009510373901093964}{0.31546445935861134}=0.030137604053342832$
+    * $\displaystyle \Delta=0.18453554064138866\times 0.030137604053342832=0.005563232045563298$
+    * $\displaystyle w_{\text{TRX}}^{\mathrm{cap}}=0.009510373901093964+0.005563232045563298=0.015073605946657262$
 * **DOGE**:
-    - $\displaystyle \alpha=\dfrac{0.010596676568448635}{0.31546445935861134}=0.03377088858619996$
-    - $\displaystyle \Delta=0.18453554064138866\times 0.03377088858619996=0.006198680648642218$
-    - $\displaystyle w_{\text{DOGE}}^{\mathrm{cap}}=0.010596676568448635+0.006198680648642218=0.016795357217090853$
+    * $\displaystyle \alpha=\dfrac{0.010596676568448635}{0.31546445935861134}=0.03377088858619996$
+    * $\displaystyle \Delta=0.18453554064138866\times 0.03377088858619996=0.006198680648642218$
+    * $\displaystyle w_{\text{DOGE}}^{\mathrm{cap}}=0.010596676568448635+0.006198680648642218=0.016795357217090853$
 * **ADA**:
-    - $\displaystyle \alpha=\dfrac{0.008867534728332318}{0.31546445935861134}=0.02810945723128813$
-    - $\displaystyle \Delta=0.18453554064138866\times 0.02810945723128813=0.005187193887311747$
-    - $\displaystyle w_{\text{ADA}}^{\mathrm{cap}}=0.008867534728332318+0.005187193887311747=0.014054728615644066$
+    * $\displaystyle \alpha=\dfrac{0.008867534728332318}{0.31546445935861134}=0.02810945723128813$
+    * $\displaystyle \Delta=0.18453554064138866\times 0.02810945723128813=0.005187193887311747$
+    * $\displaystyle w_{\text{ADA}}^{\mathrm{cap}}=0.008867534728332318+0.005187193887311747=0.014054728615644066$
 * **LINK**:
-    - $\displaystyle \alpha=\dfrac{0.004357907491436036}{0.31546445935861134}=0.013814258190277108$
-    - $\displaystyle \Delta=0.18453554064138866\times 0.013814258190277108=0.0025492216037025176$
-    - $\displaystyle w_{\text{LINK}}^{\mathrm{cap}}=0.004357907491436036+0.0025492216037025176=0.006907129095138554$
+    * $\displaystyle \alpha=\dfrac{0.004357907491436036}{0.31546445935861134}=0.013814258190277108$
+    * $\displaystyle \Delta=0.18453554064138866\times 0.013814258190277108=0.0025492216037025176$
+    * $\displaystyle w_{\text{LINK}}^{\mathrm{cap}}=0.004357907491436036+0.0025492216037025176=0.006907129095138554$
 * **HYPE**:
-    - $\displaystyle \alpha=\dfrac{0.003690795061620991}{0.31546445935861134}=0.011699559022036763$
-    - $\displaystyle \Delta=0.18453554064138866\times 0.011699559022036763=0.0021589844493973905$
-    - $\displaystyle w_{\text{HYPE}}^{\mathrm{cap}}=0.003690795061620991+0.0021589844493973905=0.0058497795110183815$
+    * $\displaystyle \alpha=\dfrac{0.003690795061620991}{0.31546445935861134}=0.011699559022036763$
+    * $\displaystyle \Delta=0.18453554064138866\times 0.011699559022036763=0.0021589844493973905$
+    * $\displaystyle w_{\text{HYPE}}^{\mathrm{cap}}=0.003690795061620991+0.0021589844493973905=0.0058497795110183815$
 
 校验求和：
 
@@ -746,30 +834,36 @@ w_i^{(10/1,\mathrm{cap})} =
 \end{cases}
 $$
 
-> **备注**：9月指数全月使用 $w_i^{(9/1,\mathrm{cap})}$，10月指数自 10/1 再平衡后使用 $w_i^{(10/1,\mathrm{cap})}$。为稳健性，可写最终用于指数的权重 $w_i^{(r,\mathrm{cap})}=\dfrac{\widehat{w}_{i,r}}{\sum_j \widehat{w}_{j,r}}$（本例中等于 $\widehat{w}_{i,r}$）。
+> **备注**：9月指数全月使用 $w_i^{(9/1,\mathrm{cap})}$，10月指数自 10/1 再平衡后使用 $w_i^{(10/1,\mathrm{cap})}$。为稳健性，可写最终用于指数的权重
+>
+> $$
+> w_i^{(r,\mathrm{cap})}
+> = \frac{\widehat{w}_{i,r}}{\sum_j \widehat{w}_{j,r}}
+> \qquad(\text{本例中 } \sum_j \widehat{w}_{j,r}=1 \Rightarrow w_i^{(r,\mathrm{cap})}=\widehat{w}_{i,r})
+> $$
 
 逐项归一化结果（完整小数）：
 
 * **BTC**:
-    - $\displaystyle w_{\text{BTC}}^{(10/1,\mathrm{cap})}=\mathbf{0.5}$
+    * $\displaystyle w_{\text{BTC}}^{(10/1,\mathrm{cap})}=\mathbf{0.5}$
 * **ETH**:
-    - $\displaystyle \widehat{w}_{\text{ETH}}^{10/1}\times \alpha = 0.23885866123882374 \times 0.9999999999999996 = \mathbf{0.23885866123882363}$
+    * $\displaystyle \widehat{w}_{\text{ETH}}^{10/1}\times \alpha = 0.23885866123882374 \times 0.9999999999999996 = \mathbf{0.23885866123882363}$
 * **XRP**:
-    - $\displaystyle \widehat{w}_{\text{XRP}}^{10/1}\times \alpha = 0.08126670985348258 \times 0.9999999999999996 = \mathbf{0.08126670985348254}$
+    * $\displaystyle \widehat{w}_{\text{XRP}}^{10/1}\times \alpha = 0.08126670985348258 \times 0.9999999999999996 = \mathbf{0.08126670985348254}$
 * **BNB**:
-    - $\displaystyle \widehat{w}_{\text{BNB}}^{10/1}\times \alpha = 0.06703093399646867 \times 0.9999999999999996 = \mathbf{0.06703093399646864}$
+    * $\displaystyle \widehat{w}_{\text{BNB}}^{10/1}\times \alpha = 0.06703093399646867 \times 0.9999999999999996 = \mathbf{0.06703093399646864}$
 * **SOL**:
-    - $\displaystyle \widehat{w}_{\text{SOL}}^{10/1}\times \alpha = 0.05416309452567627 \times 0.9999999999999996 = \mathbf{0.05416309452567625}$
+    * $\displaystyle \widehat{w}_{\text{SOL}}^{10/1}\times \alpha = 0.05416309452567627 \times 0.9999999999999996 = \mathbf{0.05416309452567625}$
 * **TRX**:
-    - $\displaystyle \widehat{w}_{\text{TRX}}^{10/1}\times \alpha = 0.015073605946657262 \times 0.9999999999999996 = \mathbf{0.015073605946657255}$
+    * $\displaystyle \widehat{w}_{\text{TRX}}^{10/1}\times \alpha = 0.015073605946657262 \times 0.9999999999999996 = \mathbf{0.015073605946657255}$
 * **DOGE**:
-    - $\displaystyle \widehat{w}_{\text{DOGE}}^{10/1}\times \alpha = 0.016795357217090853 \times 0.9999999999999996 = \mathbf{0.016795357217090846}$
+    * $\displaystyle \widehat{w}_{\text{DOGE}}^{10/1}\times \alpha = 0.016795357217090853 \times 0.9999999999999996 = \mathbf{0.016795357217090846}$
 * **ADA**:
-    - $\displaystyle \widehat{w}_{\text{ADA}}^{10/1}\times \alpha = 0.014054728615644066 \times 0.9999999999999996 = \mathbf{0.014054728615644059}$
+    * $\displaystyle \widehat{w}_{\text{ADA}}^{10/1}\times \alpha = 0.014054728615644066 \times 0.9999999999999996 = \mathbf{0.014054728615644059}$
 * **LINK**:
-    - $\displaystyle \widehat{w}_{\text{LINK}}^{10/1}\times \alpha = 0.006907129095138554 \times 0.9999999999999996 = \mathbf{0.00690712909513855}$
+    * $\displaystyle \widehat{w}_{\text{LINK}}^{10/1}\times \alpha = 0.006907129095138554 \times 0.9999999999999996 = \mathbf{0.00690712909513855}$
 * **HYPE**:
-    - $\displaystyle \widehat{w}_{\text{HYPE}}^{10/1}\times \alpha = 0.0058497795110183815 \times 0.9999999999999996 = \mathbf{0.005849779511018379}$
+    * $\displaystyle \widehat{w}_{\text{HYPE}}^{10/1}\times \alpha = 0.0058497795110183815 \times 0.9999999999999996 = \mathbf{0.005849779511018379}$
 
 
 归一化校验（构造上精确满足）：
@@ -782,9 +876,10 @@ $$
 $$
 
 > 说明：这就是"**BTC 严格 50% 锁定**，其余统一乘以同一系数 $\alpha$"的**分组归一化**结果。后续 10 月内的指数与归因，都应使用这组 $w_i^{(10/1,\mathrm{cap})}$。
+> 
 
 
-#### 12.3.4 10/1指数计算（仍用 9/1 权重，至 10/1 再平衡前）
+#### 12.3.4 10/1开盘指数计算
 
 $$
 I_{10/1}=I_{9/1}\times\sum_i w_i^{(9/1,\mathrm{cap})}\cdot\frac{P_{i,10/1}}{P_{i,9/1}},
@@ -794,45 +889,45 @@ $$
 逐项计算：
 
 * **BTC**:
-    - $\displaystyle w_{\text{BTC}}^{(9/1,\mathrm{cap})}=0.5$
-    - $\displaystyle \dfrac{P_{\text{BTC},10/1}}{P_{\text{BTC},9/1}}=1.006032901861607$
-    - $\displaystyle w_{\text{BTC}}^{(9/1,\mathrm{cap})}\cdot\dfrac{P_{\text{BTC},10/1}}{P_{\text{BTC},9/1}}=0.5030164509308035$
+    * $\displaystyle w_{\text{BTC}}^{(9/1,\mathrm{cap})}=0.5$
+    * $\displaystyle \dfrac{P_{\text{BTC},10/1}}{P_{\text{BTC},9/1}}=1.006032901861607$
+    * $\displaystyle w_{\text{BTC}}^{(9/1,\mathrm{cap})}\cdot\dfrac{P_{\text{BTC},10/1}}{P_{\text{BTC},9/1}}=0.5030164509308035$
 * **ETH**:
-    - $\displaystyle w_{\text{ETH}}^{(9/1,\mathrm{cap})}=0.25349565720340045$
-    - $\displaystyle \dfrac{P_{\text{ETH},10/1}}{P_{\text{ETH},9/1}}=0.9414106690907175$
-    - $\displaystyle w_{\text{ETH}}^{(9/1,\mathrm{cap})}\cdot\dfrac{P_{\text{ETH},10/1}}{P_{\text{ETH},9/1}}=0.23849770316759482$
+    * $\displaystyle w_{\text{ETH}}^{(9/1,\mathrm{cap})}=0.25349565720340045$
+    * $\displaystyle \dfrac{P_{\text{ETH},10/1}}{P_{\text{ETH},9/1}}=0.9414106690907175$
+    * $\displaystyle w_{\text{ETH}}^{(9/1,\mathrm{cap})}\cdot\dfrac{P_{\text{ETH},10/1}}{P_{\text{ETH},9/1}}=0.23849770316759482$
 * **XRP**:
-    - $\displaystyle w_{\text{XRP}}^{(9/1,\mathrm{cap})}=0.0790526534062273$
-    - $\displaystyle \dfrac{P_{\text{XRP},10/1}}{P_{\text{XRP},9/1}}=1.1779520860906025$
-    - $\displaystyle w_{\text{XRP}}^{(9/1,\mathrm{cap})}\cdot\dfrac{P_{\text{XRP},10/1}}{P_{\text{XRP},9/1}}=0.09308542128723219$
+    * $\displaystyle w_{\text{XRP}}^{(9/1,\mathrm{cap})}=0.0790526534062273$
+    * $\displaystyle \dfrac{P_{\text{XRP},10/1}}{P_{\text{XRP},9/1}}=1.1779520860906025$
+    * $\displaystyle w_{\text{XRP}}^{(9/1,\mathrm{cap})}\cdot\dfrac{P_{\text{XRP},10/1}}{P_{\text{XRP},9/1}}=0.09308542128723219$
 * **BNB**:
-    - $\displaystyle w_{\text{BNB}}^{(9/1,\mathrm{cap})}=0.057134106672981355$
-    - $\displaystyle \dfrac{P_{\text{BNB},10/1}}{P_{\text{BNB},9/1}}=1.0719095848085655$
-    - $\displaystyle w_{\text{BNB}}^{(9/1,\mathrm{cap})}\cdot\dfrac{P_{\text{BNB},10/1}}{P_{\text{BNB},9/1}}=0.061231829576375946$
+    * $\displaystyle w_{\text{BNB}}^{(9/1,\mathrm{cap})}=0.057134106672981355$
+    * $\displaystyle \dfrac{P_{\text{BNB},10/1}}{P_{\text{BNB},9/1}}=1.0719095848085655$
+    * $\displaystyle w_{\text{BNB}}^{(9/1,\mathrm{cap})}\cdot\dfrac{P_{\text{BNB},10/1}}{P_{\text{BNB},9/1}}=0.061231829576375946$
 * **SOL**:
-    - $\displaystyle w_{\text{SOL}}^{(9/1,\mathrm{cap})}=0.05198803760620158$
-    - $\displaystyle \dfrac{P_{\text{SOL},10/1}}{P_{\text{SOL},9/1}}=1.0135201644185747$
-    - $\displaystyle w_{\text{SOL}}^{(9/1,\mathrm{cap})}\cdot\dfrac{P_{\text{SOL},10/1}}{P_{\text{SOL},9/1}}=0.05268828593805782$
+    * $\displaystyle w_{\text{SOL}}^{(9/1,\mathrm{cap})}=0.05198803760620158$
+    * $\displaystyle \dfrac{P_{\text{SOL},10/1}}{P_{\text{SOL},9/1}}=1.0135201644185747$
+    * $\displaystyle w_{\text{SOL}}^{(9/1,\mathrm{cap})}\cdot\dfrac{P_{\text{SOL},10/1}}{P_{\text{SOL},9/1}}=0.05268828593805782$
 * **TRX**:
-    - $\displaystyle w_{\text{TRX}}^{(9/1,\mathrm{cap})}=0.0154356179070501$
-    - $\displaystyle \dfrac{P_{\text{TRX},10/1}}{P_{\text{TRX},9/1}}=1.0537549756925405$
-    - $\displaystyle w_{\text{TRX}}^{(9/1,\mathrm{cap})}\cdot\dfrac{P_{\text{TRX},10/1}}{P_{\text{TRX},9/1}}=0.01627275481474169$
+    * $\displaystyle w_{\text{TRX}}^{(9/1,\mathrm{cap})}=0.0154356179070501$
+    * $\displaystyle \dfrac{P_{\text{TRX},10/1}}{P_{\text{TRX},9/1}}=1.0537549756925405$
+    * $\displaystyle w_{\text{TRX}}^{(9/1,\mathrm{cap})}\cdot\dfrac{P_{\text{TRX},10/1}}{P_{\text{TRX},9/1}}=0.01627275481474169$
 * **DOGE**:
-    - $\displaystyle w_{\text{DOGE}}^{(9/1,\mathrm{cap})}=0.01542025166927348$
-    - $\displaystyle \dfrac{P_{\text{DOGE},10/1}}{P_{\text{DOGE},9/1}}=1.0886675231718808$
-    - $\displaystyle w_{\text{DOGE}}^{(9/1,\mathrm{cap})}\cdot\dfrac{P_{\text{DOGE},10/1}}{P_{\text{DOGE},9/1}}=0.01678752719147502$
+    * $\displaystyle w_{\text{DOGE}}^{(9/1,\mathrm{cap})}=0.01542025166927348$
+    * $\displaystyle \dfrac{P_{\text{DOGE},10/1}}{P_{\text{DOGE},9/1}}=1.0886675231718808$
+    * $\displaystyle w_{\text{DOGE}}^{(9/1,\mathrm{cap})}\cdot\dfrac{P_{\text{DOGE},10/1}}{P_{\text{DOGE},9/1}}=0.01678752719147502$
 * **ADA**:
-    - $\displaystyle w_{\text{ADA}}^{(9/1,\mathrm{cap})}=0.014173382432098343$
-    - $\displaystyle \dfrac{P_{\text{ADA},10/1}}{P_{\text{ADA},9/1}}=0.9940505247028603$
-    - $\displaystyle w_{\text{ADA}}^{(9/1,\mathrm{cap})}\cdot\dfrac{P_{\text{ADA},10/1}}{P_{\text{ADA},9/1}}=0.014089058243441658$
+    * $\displaystyle w_{\text{ADA}}^{(9/1,\mathrm{cap})}=0.014173382432098343$
+    * $\displaystyle \dfrac{P_{\text{ADA},10/1}}{P_{\text{ADA},9/1}}=0.9940505247028603$
+    * $\displaystyle w_{\text{ADA}}^{(9/1,\mathrm{cap})}\cdot\dfrac{P_{\text{ADA},10/1}}{P_{\text{ADA},9/1}}=0.014089058243441658$
 * **LINK**:
-    - $\displaystyle w_{\text{LINK}}^{(9/1,\mathrm{cap})}=0.007548646199324492$
-    - $\displaystyle \dfrac{P_{\text{LINK},10/1}}{P_{\text{LINK},9/1}}=0.9181080365364191$
-    - $\displaystyle w_{\text{LINK}}^{(9/1,\mathrm{cap})}\cdot\dfrac{P_{\text{LINK},10/1}}{P_{\text{LINK},9/1}}=0.006930472740569912$
+    * $\displaystyle w_{\text{LINK}}^{(9/1,\mathrm{cap})}=0.007548646199324492$
+    * $\displaystyle \dfrac{P_{\text{LINK},10/1}}{P_{\text{LINK},9/1}}=0.9181080365364191$
+    * $\displaystyle w_{\text{LINK}}^{(9/1,\mathrm{cap})}\cdot\dfrac{P_{\text{LINK},10/1}}{P_{\text{LINK},9/1}}=0.006930472740569912$
 * **HYPE**:
-    - $\displaystyle w_{\text{HYPE}}^{(9/1,\mathrm{cap})}=0.005751646903442812$
-    - $\displaystyle \dfrac{P_{\text{HYPE},10/1}}{P_{\text{HYPE},9/1}}=1.0211971868882697$
-    - $\displaystyle w_{\text{HYPE}}^{(9/1,\mathrm{cap})}\cdot\dfrac{P_{\text{HYPE},10/1}}{P_{\text{HYPE},9/1}}=0.005873565637770427$
+    * $\displaystyle w_{\text{HYPE}}^{(9/1,\mathrm{cap})}=0.005751646903442812$
+    * $\displaystyle \dfrac{P_{\text{HYPE},10/1}}{P_{\text{HYPE},9/1}}=1.0211971868882697$
+    * $\displaystyle w_{\text{HYPE}}^{(9/1,\mathrm{cap})}\cdot\dfrac{P_{\text{HYPE},10/1}}{P_{\text{HYPE},9/1}}=0.005873565637770427$
 
 求和与指数：
 
@@ -844,4 +939,93 @@ $$
 $$
 I_{10/1}=1000\times 1.0270028144934070
 =\boxed{1027.002814493407}
+$$
+
+这个指数同时也是9.30收盘指数的值。
+
+#### 12.3.5 10/1 收盘指数计算（**使用 10/1 新权重**；逐币展开到“价/价”与分项贡献）
+
+$$
+I_{10/2}
+= I_{10/1}\cdot
+\sum_{i\in C} w_i^{(10/1,\mathrm{cap})}\cdot
+\frac{P_{i,10/2}}{P_{i,10/1}},
+\qquad
+I_{10/1}=\mathbf{1027.002809999999954}.
+$$
+
+* **BTC**:
+  * $\displaystyle w_{\text{BTC}}^{(10/1,\mathrm{cap})}=0.5$
+  * $\displaystyle \frac{P_{\text{BTC},10/2}}{P_{\text{BTC},10/1}}
+    =\frac{\mathbf{118503.244517524843104}}{\mathbf{114024.227835500540095}}
+    =\mathbf{1.039281271770470}$
+  * $\displaystyle w\times\frac{P_{10/2}}{P_{10/1}}=\mathbf{0.51964063588523510}$
+* **ETH**:
+  * $\displaystyle w_{\text{ETH}}^{(10/1,\mathrm{cap})}=0.23885866123882363$
+  * $\displaystyle \frac{P_{\text{ETH},10/2}}{P_{\text{ETH},10/1}}
+    =\frac{\mathbf{4343.951983440489130}}{\mathbf{4144.230463371581209}}
+    =\mathbf{1.048192667332121}$
+  * $\displaystyle w\times\frac{P_{10/2}}{P_{10/1}}=\mathbf{0.2503698972393020421016205528}$
+* **XRP**:
+  * $\displaystyle w_{\text{XRP}}^{(10/1,\mathrm{cap})}=0.08126670985348254$
+  * $\displaystyle \frac{P_{\text{XRP},10/2}}{P_{\text{XRP},10/1}}
+    =\frac{\mathbf{2.944797512076650}}{\mathbf{2.844933401817261}}
+    =\mathbf{1.035102442185676}$
+  * $\displaystyle w\times\frac{P_{10/2}}{P_{10/1}}=\mathbf{0.08411936983773451697711790410}$
+* **BNB**:
+  * $\displaystyle w_{\text{BNB}}^{(10/1,\mathrm{cap})}=0.06703093399646864$
+  * $\displaystyle \frac{P_{\text{BNB},10/2}}{P_{\text{BNB},10/1}}
+    =\frac{\mathbf{1025.818785012324724}}{\mathbf{1008.922531171410355}}
+    =\mathbf{1.016746829730621}$
+  * $\displaystyle w\times\frac{P_{10/2}}{P_{10/1}}=\mathbf{0.06815348963479196813300287564}$
+* **SOL**:
+  * $\displaystyle w_{\text{SOL}}^{(10/1,\mathrm{cap})}=0.05416309452567625$
+  * $\displaystyle \frac{P_{\text{SOL},10/2}}{P_{\text{SOL},10/1}}
+    =\frac{\mathbf{221.218883338975502}}{\mathbf{208.699294488173308}}
+    =\mathbf{1.059988649609506}$
+  * $\displaystyle w\times\frac{P_{10/2}}{P_{10/1}}=\mathbf{0.05741226542494361138978143614}$
+* **TRX**:
+  * $\displaystyle w_{\text{TRX}}^{(10/1,\mathrm{cap})}=0.015073605946657255$
+  * $\displaystyle \frac{P_{\text{TRX},10/2}}{P_{\text{TRX},10/1}}
+    =\frac{\mathbf{0.341791716791851}}{\mathbf{0.333500157269788}}
+    =\mathbf{1.024862235718095}$
+  * $\displaystyle w\times\frac{P_{10/2}}{P_{10/1}}=\mathbf{0.01544836949082472318580857720}$
+* **DOGE**:
+  * $\displaystyle w_{\text{DOGE}}^{(10/1,\mathrm{cap})}=0.016795357217090846$
+  * $\displaystyle \frac{P_{\text{DOGE},10/2}}{P_{\text{DOGE},10/1}}
+    =\frac{\mathbf{0.248066930177501}}{\mathbf{0.232770385301574}}
+    =\mathbf{1.065715167572152}$
+  * $\displaystyle w\times\frac{P_{10/2}}{P_{10/1}}=\mathbf{0.01789906693104612846014140885}$
+* **ADA**:
+  * $\displaystyle w_{\text{ADA}}^{(10/1,\mathrm{cap})}=0.014054728615644059$
+  * $\displaystyle \frac{P_{\text{ADA},10/2}}{P_{\text{ADA},10/1}}
+    =\frac{\mathbf{0.849177301515390}}{\mathbf{0.806863785307213}}
+    =\mathbf{1.052441957339882}$
+  * $\displaystyle w\times\frac{P_{10/2}}{P_{10/1}}=\mathbf{0.01479178609412928635167152019}$
+* **LINK**:
+  * $\displaystyle w_{\text{LINK}}^{(10/1,\mathrm{cap})}=0.00690712909513855$
+  * $\displaystyle \frac{P_{\text{LINK},10/2}}{P_{\text{LINK},10/1}}
+    =\frac{\mathbf{22.577894311182035}}{\mathbf{21.326800638475884}}
+    =\mathbf{1.058662979689933}$
+  * $\displaystyle w\times\frac{P_{10/2}}{P_{10/1}}=\mathbf{0.007312321868962404605172127648}$
+* **HYPE**:
+  * $\displaystyle w_{\text{HYPE}}^{(10/1,\mathrm{cap})}=0.005849779511018379$
+  * $\displaystyle \frac{P_{\text{HYPE},10/2}}{P_{\text{HYPE},10/1}}
+    =\frac{\mathbf{47.111017596069502}}{\mathbf{45.243659922432194}}
+    =\mathbf{1.041273355799217}$
+  * $\displaystyle w\times\frac{P_{10/2}}{P_{10/1}}=\mathbf{0.006091219542123609614471169707}$
+
+
+求和与指数：
+
+$$
+\sum_i w_i^{(10/1,\mathrm{cap})}\cdot\frac{P_{i,10/2}}{P_{i,10/1}}
+=\boxed{\mathbf{1.041238421949093390818787573}}
+$$
+
+
+$$
+I_{10/2}
+=\mathbf{1027.002809999999954}\times \mathbf{1.041238421949093390818787573}
+=\boxed{\mathbf{1069.3547852216845}}.
 $$
