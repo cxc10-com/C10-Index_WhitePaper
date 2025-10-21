@@ -362,17 +362,13 @@ $$
 自然权重：
 
 $$
-\begin{aligned}
-w_{i}^{(\mathrm{nat},SEP)}
-&=\frac{\mathrm{MarketCap}_{i,r(SEP)}}{\displaystyle\sum_{j\in C_{SEP}}\mathrm{MarketCap}_{j,r(SEP)}}
-\end{aligned}
+w_{i}^{(\mathrm{nat},SEP)}=\frac{\mathrm{MarketCap}_{i,r(SEP)}}{\displaystyle\sum_{j\in C_{SEP}}\mathrm{MarketCap}_{j,r(SEP)}}
 $$
 
 其中，
 
 $$
-\sum\limits_{j\in C_{SEP}}\mathrm{MarketCap}_{j,r(SEP)}=\sum\limits_{j\in C_{SEP}}\mathrm{MarketCap}_{j,9/1(O)}=3200565092014.6787
-
+\sum_{j\in C_{SEP}}\mathrm{MarketCap}_{j,r(SEP)}=3200565092014.6787
 $$
 
 * **BTC**:
@@ -542,7 +538,7 @@ $$
 
 ### 12.3 2025年9月的指数计算示例
 
-#### 12.3.1 9月1日收盘指数$I_{9/1}$
+#### 12.3.1 9月1日收盘指数 $I_{9/1}$
 
 公式
 
@@ -554,61 +550,61 @@ $$
 
 * **BTC**:
   * $\displaystyle w_{\text{BTC}}^{(cap,SEP)}=0.5$
-  * $\displaystyle \frac{P_{\text{BTC},9/1}}{P_{\text{BTC},9/1(O)}}
+  * $\displaystyle \frac{P_{\text{BTC},9/1}}{P_{\text{BTC},r(SEP)}}
     =\frac{\mathbf{109162.68557992298}}{\mathbf{108253.36092385623}}
     =\mathbf{1.0083999669692136}$
   * $\displaystyle w_{\text{BTC}}^{(cap,SEP)}\times\frac{P_{9/1}}{P_{r(SEP)}}=\mathbf{0.5041999834846068}$
 * **ETH**:
   * $\displaystyle w_{\text{ETH}}^{(cap,SEP)}=0.25349565720340045$
-  * $\displaystyle \frac{P_{\text{ETH},9/1}}{P_{\text{ETH},9/1(O)}}
+  * $\displaystyle \frac{P_{\text{ETH},9/1}}{P_{\text{ETH},r(SEP)}}
     =\frac{\mathbf{4303.202222745541}}{\mathbf{4388.931464519364}}
     =\mathbf{0.9804669445246825}$
   * $\displaystyle w_{\text{ETH}}^{(cap,SEP)}\times\frac{P_{9/1}}{P_{r(SEP)}}=\mathbf{0.24854411246849437}$
 * **XRP**:
   * $\displaystyle w_{\text{XRP}}^{(cap,SEP)}=0.0790526534062273$
-  * $\displaystyle \frac{P_{\text{XRP},9/1}}{P_{\text{XRP},9/1(O)}}
+  * $\displaystyle \frac{P_{\text{XRP},9/1}}{P_{\text{XRP},r(SEP)}}
     =\frac{\mathbf{2.752094842681695}}{\mathbf{2.776712609891609}}
     =\mathbf{0.9901280646537916}$
   * $\displaystyle w_{\text{XRP}}^{(cap,SEP)}\times\frac{P_{9/1}}{P_{r(SEP)}}=\mathbf{0.07827852787876354}$
 * **BNB**:
   * $\displaystyle w_{\text{BNB}}^{(cap,SEP)}=0.057134106672981355$
-  * $\displaystyle \frac{P_{\text{BNB},9/1}}{P_{\text{BNB},9/1(O)}}
+  * $\displaystyle \frac{P_{\text{BNB},9/1}}{P_{\text{BNB},r(SEP)}}
     =\frac{\mathbf{1005.574831704243}}{\mathbf{1002.251682003274}}
     =\mathbf{1.0033150266045858}$
   * $\displaystyle w_{\text{BNB}}^{(cap,SEP)}\times\frac{P_{9/1}}{P_{r(SEP)}}=\mathbf{0.05732380867156660}$
 * **SOL**:
   * $\displaystyle w_{\text{SOL}}^{(cap,SEP)}=0.05198803760620158$
-  * $\displaystyle \frac{P_{\text{SOL},9/1}}{P_{\text{SOL},9/1(O)}}
+  * $\displaystyle \frac{P_{\text{SOL},9/1}}{P_{\text{SOL},r(SEP)}}
     =\frac{\mathbf{197.66270682973027}}{\mathbf{205.12838610102386}}
     =\mathbf{0.9635576989422688}$
   * $\displaystyle w_{\text{SOL}}^{(cap,SEP)}\times\frac{P_{9/1}}{P_{r(SEP)}}=\mathbf{0.05007036893063023}$
 * **TRX**:
   * $\displaystyle w_{\text{TRX}}^{(cap,SEP)}=0.0154356179070501$
-  * $\displaystyle \frac{P_{\text{TRX},9/1}}{P_{\text{TRX},9/1(O)}}
+  * $\displaystyle \frac{P_{\text{TRX},9/1}}{P_{\text{TRX},r(SEP)}}
     =\frac{\mathbf{0.323681332993614}}{\mathbf{0.332362570767100}}
     =\mathbf{0.9738575385126106}$
   * $\displaystyle w_{\text{TRX}}^{(cap,SEP)}\times\frac{P_{9/1}}{P_{r(SEP)}}=\mathbf{0.01503470306394761}$
 * **DOGE**:
   * $\displaystyle w_{\text{DOGE}}^{(cap,SEP)}=0.01542025166927348$
-  * $\displaystyle \frac{P_{\text{DOGE},9/1}}{P_{\text{DOGE},9/1(O)}}
+  * $\displaystyle \frac{P_{\text{DOGE},9/1}}{P_{\text{DOGE},r(SEP)}}
     =\frac{\mathbf{0.241441506427685}}{\mathbf{0.243231957517967}}
     =\mathbf{0.9926462740767630}$
   * $\displaystyle w_{\text{DOGE}}^{(cap,SEP)}\times\frac{P_{9/1}}{P_{r(SEP)}}=\mathbf{0.01530754444936604}$
 * **ADA**:
   * $\displaystyle w_{\text{ADA}}^{(cap,SEP)}=0.014173382432098343$
-  * $\displaystyle \frac{P_{\text{ADA},9/1}}{P_{\text{ADA},9/1(O)}}
+  * $\displaystyle \frac{P_{\text{ADA},9/1}}{P_{\text{ADA},r(SEP)}}
     =\frac{\mathbf{0.803044535123922}}{\mathbf{0.814881556780723}}
     =\mathbf{0.9853985136344930}$
   * $\displaystyle w_{\text{ADA}}^{(cap,SEP)}\times\frac{P_{9/1}}{P_{r(SEP)}}=\mathbf{0.013959113371730603}$
 * **LINK**:
   * $\displaystyle w_{\text{LINK}}^{(cap,SEP)}=0.007548646199324492$
-  * $\displaystyle \frac{P_{\text{LINK},9/1}}{P_{\text{LINK},9/1(O)}}
+  * $\displaystyle \frac{P_{\text{LINK},9/1}}{P_{\text{LINK},r(SEP)}}
     =\frac{\mathbf{22.440918059371164}}{\mathbf{23.229075217478396}}
     =\mathbf{0.9660702309184399}$
   * $\displaystyle w_{\text{LINK}}^{(cap,SEP)}\times\frac{P_{9/1}}{P_{r(SEP)}}=\mathbf{0.007292522376903016}$
 * **HYPE**:
   * $\displaystyle w_{\text{HYPE}}^{(cap,SEP)}=0.005751646903442812$
-  * $\displaystyle \frac{P_{\text{HYPE},9/1}}{P_{\text{HYPE},9/1(O)}}
+  * $\displaystyle \frac{P_{\text{HYPE},9/1}}{P_{\text{HYPE},r(SEP)}}
     =\frac{\mathbf{43.030960057683984}}{\mathbf{44.30452855074537}}
     =\mathbf{0.9712542140787556}$
   * $\displaystyle w_{\text{HYPE}}^{(cap,SEP)}\times\frac{P_{9/1}}{P_{r(SEP)}}=\mathbf{0.005586311292861857}$
@@ -626,61 +622,61 @@ I_{9/1}
 =\boxed{\mathbf{995.6529534972315}}
 $$
 
-#### 12.3.2 9月30日收盘指数$I_{9/30}$
+#### 12.3.2 9月30日收盘指数 $I_{9/30}$
 
 $$
-I_{9/30} = I_{9/1(O)}\cdot \sum_{i\in C_{9/1}} w_i^{(9/1,\mathrm{cap})} \cdot \frac{P_{i,9/30}}{P_{i,9/1(O)}},
-\qquad I_{9/1(O)}=1000
+I_{9/30} = I_{r(SEP)}\cdot \sum_{i\in C_{9/1}} w_i^{(\mathrm{cap},SEP)} \cdot \frac{P_{i,9/30}}{P_{i,r(SEP)}},
+\qquad I_{r(SEP)}=1000
 $$
 
 逐项计算：
 
 * **BTC**:
-    * $\displaystyle w_{\text{BTC}}^{(9/1,\mathrm{cap})}=0.5$
-    * $\displaystyle \frac{P_{\text{BTC},9/30}}{P_{\text{BTC},9/1(O)}}=1.0533088937137336$
-    * $\displaystyle w_{\text{BTC}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{BTC},9/30}}{P_{\text{BTC},9/1(O)}}=0.5266544468568668$
+    * $\displaystyle w_{\text{BTC}}^{(\mathrm{cap},SEP)}=0.5$
+    * $\displaystyle \frac{P_{\text{BTC},9/30}}{P_{\text{BTC},r(SEP)}}=1.0533088937137336$
+    * $\displaystyle w_{\text{BTC}}^{(\mathrm{cap},SEP)}\cdot\frac{P_{\text{BTC},9/30}}{P_{\text{BTC},r(SEP)}}=0.5266544468568668$
 * **ETH**:
-    * $\displaystyle w_{\text{ETH}}^{(9/1,\mathrm{cap})}=0.25349565720340045$
-    * $\displaystyle \frac{P_{\text{ETH},9/30}}{P_{\text{ETH},9/1(O)}}=0.9442458823688693$
-    * $\displaystyle w_{\text{ETH}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{ETH},9/30}}{P_{\text{ETH},9/1(O)}}=0.23936223051270128$
+    * $\displaystyle w_{\text{ETH}}^{(\mathrm{cap},SEP)}=0.25349565720340045$
+    * $\displaystyle \frac{P_{\text{ETH},9/30}}{P_{\text{ETH},r(SEP)}}=0.9442458823688693$
+    * $\displaystyle w_{\text{ETH}}^{(\mathrm{cap},SEP)}\cdot\frac{P_{\text{ETH},9/30}}{P_{\text{ETH},r(SEP)}}=0.23936223051270128$
 * **XRP**:
-    * $\displaystyle w_{\text{XRP}}^{(9/1,\mathrm{cap})}=0.0790526534062273$
-    * $\displaystyle \frac{P_{\text{XRP},9/30}}{P_{\text{XRP},9/1(O)}}=1.0246069432522836$
-    * $\displaystyle w_{\text{XRP}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{XRP},9/30}}{P_{\text{XRP},9/1(O)}}=0.08100184744649337$
+    * $\displaystyle w_{\text{XRP}}^{(\mathrm{cap},SEP)}=0.0790526534062273$
+    * $\displaystyle \frac{P_{\text{XRP},9/30}}{P_{\text{XRP},r(SEP)}}=1.0246069432522836$
+    * $\displaystyle w_{\text{XRP}}^{(\mathrm{cap},SEP)}\cdot\frac{P_{\text{XRP},9/30}}{P_{\text{XRP},r(SEP)}}=0.08100184744649337$
 * **BNB**:
-    * $\displaystyle w_{\text{BNB},9/30}^{(9/1,\mathrm{cap})}=0.057134106672981355$
-    * $\displaystyle \frac{P_{\text{BNB},9/30}}{P_{\text{BNB},9/1(O)}}=1.1958694450416485$
-    * $\displaystyle w_{\text{BNB}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{BNB},9/30}}{P_{\text{BNB},9/1(O)}}=0.06836331852592957$
+    * $\displaystyle w_{\text{BNB},9/30}^{(\mathrm{cap},SEP)}=0.057134106672981355$
+    * $\displaystyle \frac{P_{\text{BNB},9/30}}{P_{\text{BNB},r(SEP)}}=1.1958694450416485$
+    * $\displaystyle w_{\text{BNB}}^{(\mathrm{cap},SEP)}\cdot\frac{P_{\text{BNB},9/30}}{P_{\text{BNB},r(SEP)}}=0.06836331852592957$
 * **SOL**:
-    * $\displaystyle w_{\text{SOL}}^{(9/1,\mathrm{cap})}=0.05198803760620158$
-    * $\displaystyle \frac{P_{\text{SOL},9/30}}{P_{\text{SOL},9/1(O)}}=1.0769681579199496$
-    * $\displaystyle w_{\text{SOL}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{SOL},9/30}}{P_{\text{SOL},9/1(O)}}=0.05599265924895757$
+    * $\displaystyle w_{\text{SOL}}^{(\mathrm{cap},SEP)}=0.05198803760620158$
+    * $\displaystyle \frac{P_{\text{SOL},9/30}}{P_{\text{SOL},r(SEP)}}=1.0769681579199496$
+    * $\displaystyle w_{\text{SOL}}^{(\mathrm{cap},SEP)}\cdot\frac{P_{\text{SOL},9/30}}{P_{\text{SOL},r(SEP)}}=0.05599265924895757$
 * **TRX**:
-    * $\displaystyle w_{\text{TRX}}^{(9/1,\mathrm{cap})}=0.0154356179070501$
-    * $\displaystyle \frac{P_{\text{TRX},9/30}}{P_{\text{TRX},9/1(O)}}=1.045951045002095$
-    * $\displaystyle w_{\text{TRX}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{TRX},9/30}}{P_{\text{TRX},9/1(O)}}=0.01614138329095509$
+    * $\displaystyle w_{\text{TRX}}^{(\mathrm{cap},SEP)}=0.0154356179070501$
+    * $\displaystyle \frac{P_{\text{TRX},9/30}}{P_{\text{TRX},r(SEP)}}=1.045951045002095$
+    * $\displaystyle w_{\text{TRX}}^{(\mathrm{cap},SEP)}\cdot\frac{P_{\text{TRX},9/30}}{P_{\text{TRX},r(SEP)}}=0.01614138329095509$
 * **DOGE**:
-    * $\displaystyle w_{\text{DOGE}}^{(9/1,\mathrm{cap})}=0.01542025166927348$
-    * $\displaystyle \frac{P_{\text{DOGE},9/30}}{P_{\text{DOGE},9/1(O)}}=1.0645391372128677$
-    * $\displaystyle w_{\text{DOGE}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{DOGE},9/30}}{P_{\text{DOGE},9/1(O)}}=0.01641734102926561$
+    * $\displaystyle w_{\text{DOGE}}^{(\mathrm{cap},SEP)}=0.01542025166927348$
+    * $\displaystyle \frac{P_{\text{DOGE},9/30}}{P_{\text{DOGE},r(SEP)}}=1.0645391372128677$
+    * $\displaystyle w_{\text{DOGE}}^{(\mathrm{cap},SEP)}\cdot\frac{P_{\text{DOGE},9/30}}{P_{\text{DOGE},r(SEP)}}=0.01641734102926561$
 * **ADA**:
-    * $\displaystyle w_{\text{ADA}}^{(9/1,\mathrm{cap})}=0.014173382432098343$
-    * $\displaystyle \frac{P_{\text{ADA},9/30}}{P_{\text{ADA},9/1(O)}}=0.9940505247028603$
-    * $\displaystyle w_{\text{ADA}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{ADA},9/30}}{P_{\text{ADA},9/1(O)}}=0.014089058243441659$
+    * $\displaystyle w_{\text{ADA}}^{(\mathrm{cap},SEP)}=0.014173382432098343$
+    * $\displaystyle \frac{P_{\text{ADA},9/30}}{P_{\text{ADA},r(SEP)}}=0.9940505247028603$
+    * $\displaystyle w_{\text{ADA}}^{(\mathrm{cap},SEP)}\cdot\frac{P_{\text{ADA},9/30}}{P_{\text{ADA},r(SEP)}}=0.014089058243441659$
 * **LINK**:
-    * $\displaystyle w_{\text{LINK}}^{(9/1,\mathrm{cap})}=0.007548646199324492$
-    * $\displaystyle \frac{P_{\text{LINK},9/30}}{P_{\text{LINK},9/1(O)}}=0.9181080365364191$
-    * $\displaystyle w_{\text{LINK}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{LINK},9/30}}{P_{\text{LINK},9/1(O)}}=0.006930472740569912$
+    * $\displaystyle w_{\text{LINK}}^{(\mathrm{cap},SEP)}=0.007548646199324492$
+    * $\displaystyle \frac{P_{\text{LINK},9/30}}{P_{\text{LINK},r(SEP)}}=0.9181080365364191$
+    * $\displaystyle w_{\text{LINK}}^{(\mathrm{cap},SEP)}\cdot\frac{P_{\text{LINK},9/30}}{P_{\text{LINK},r(SEP)}}=0.006930472740569912$
 * **HYPE**:
-    * $\displaystyle w_{\text{HYPE}}^{(9/1,\mathrm{cap})}=0.005751646903442812$
-    * $\displaystyle \frac{P_{\text{HYPE},9/30}}{P_{\text{HYPE},9/1(O)}}=1.0211971868882697$
-    * $\displaystyle w_{\text{HYPE}}^{(9/1,\mathrm{cap})}\cdot\frac{P_{\text{HYPE},9/30}}{P_{\text{HYPE},9/1(O)}}=0.005873565637770427$
+    * $\displaystyle w_{\text{HYPE}}^{(\mathrm{cap},SEP)}=0.005751646903442812$
+    * $\displaystyle \frac{P_{\text{HYPE},9/30}}{P_{\text{HYPE},r(SEP)}}=1.0211971868882697$
+    * $\displaystyle w_{\text{HYPE}}^{(\mathrm{cap},SEP)}\cdot\frac{P_{\text{HYPE},9/30}}{P_{\text{HYPE},r(SEP)}}=0.005873565637770427$
 
 
 求和与指数：
 
 $$
-\sum_i w_i^{(9/1,\mathrm{cap})}\cdot\frac{P_{i,9/30}}{P_{i,9/1(O)}}
+\sum_i w_i^{(\mathrm{cap},SEP)}\cdot\frac{P_{i,9/30}}{P_{i,r(SEP)}}
 = \mathbf{1.027002814493407}
 $$
 
@@ -691,109 +687,109 @@ $$
 
 ### 12.4 2025年10月的指数计算示例
 
-#### 12.4.1 10月的指数基准值
+#### 12.4.1 10月的指数基准值 
 
 $$
-I_{r} = I_{10/1(O)} = I_{9/30} = 1027.002814493407
+I_{t0} = I_{9/30} = I_{r(OCT)} = I_{10/1(O)} = 1027.002814493407
 $$
 
 #### 12.4.2 10月的约束权重
 
 * **BTC**:
-  * $\displaystyle w_{\text{BTC}}^{(10/1,\mathrm{cap})}=0.5$
+  * $\displaystyle w_{\text{BTC}}^{(\mathrm{cap},OCT)}=0.5$
 * **ETH**:
-  * $\displaystyle w_{\text{ETH}}^{(10/1,\mathrm{cap})}=0.23885866123882363$
+  * $\displaystyle w_{\text{ETH}}^{(\mathrm{cap},OCT)}=0.23885866123882363$
 * **XRP**:
-  * $\displaystyle w_{\text{XRP}}^{(10/1,\mathrm{cap})}=0.08126670985348254$
+  * $\displaystyle w_{\text{XRP}}^{(\mathrm{cap},OCT)}=0.08126670985348254$
 * **BNB**:
-  * $\displaystyle w_{\text{BNB}}^{(10/1,\mathrm{cap})}=0.06703093399646864$
+  * $\displaystyle w_{\text{BNB}}^{(\mathrm{cap},OCT)}=0.06703093399646864$
 * **SOL**:
-  * $\displaystyle w_{\text{SOL}}^{(10/1,\mathrm{cap})}=0.05416309452567625$
+  * $\displaystyle w_{\text{SOL}}^{(\mathrm{cap},OCT)}=0.05416309452567625$
 * **TRX**:
-  * $\displaystyle w_{\text{TRX}}^{(10/1,\mathrm{cap})}=0.015073605946657255$
+  * $\displaystyle w_{\text{TRX}}^{(\mathrm{cap},OCT)}=0.015073605946657255$
 * **DOGE**:
-  * $\displaystyle w_{\text{DOGE}}^{(10/1,\mathrm{cap})}=0.016795357217090846$
+  * $\displaystyle w_{\text{DOGE}}^{(\mathrm{cap},OCT)}=0.016795357217090846$
 * **ADA**:
-  * $\displaystyle w_{\text{ADA}}^{(10/1,\mathrm{cap})}=0.014054728615644059$
+  * $\displaystyle w_{\text{ADA}}^{(\mathrm{cap},OCT)}=0.014054728615644059$
 * **LINK**:
-  * $\displaystyle w_{\text{LINK}}^{(10/1,\mathrm{cap})}=0.00690712909513855$
+  * $\displaystyle w_{\text{LINK}}^{(\mathrm{cap},OCT)}=0.00690712909513855$
 * **HYPE**:
-  * $\displaystyle w_{\text{HYPE}}^{(10/1,\mathrm{cap})}=0.005849779511018379$
+  * $\displaystyle w_{\text{HYPE}}^{(\mathrm{cap},OCT)}=0.005849779511018379$
 
-#### 12.4.3 10月1日收盘指数$I_{10/1}$
+#### 12.4.3 10月1日收盘指数 $I_{10/1}$
 
 $$
 I_{10/1}
-= I_{10/1(O)}\cdot
-\sum_{i\in C} w_i^{(10/1,\mathrm{cap})}\cdot
-\frac{P_{i,10/1}}{P_{i,10/1(O)}}
+= I_{r(OCT)}\cdot
+\sum_{i\in C} w_i^{(\mathrm{cap},OCT)}\cdot
+\frac{P_{i,10/1}}{P_{i,r(OCT)}}
 $$
 
 * **BTC**:
-  * $\displaystyle w_{\text{BTC}}^{(10/1,\mathrm{cap})}=0.5$
-  * $\displaystyle \frac{P_{\text{BTC},10/1}}{P_{\text{BTC},10/1(O)}}
+  * $\displaystyle w_{\text{BTC}}^{(\mathrm{cap},OCT)}=0.5$
+  * $\displaystyle \frac{P_{\text{BTC},10/1}}{P_{\text{BTC},r(OCT)}}
     =\frac{\mathbf{118503.244517524843104}}{\mathbf{114024.227835500540095}}
     =\mathbf{1.039281271770470}$
-  * $\displaystyle w_{\text{BTC}}^{(10/1,\mathrm{cap})}\times\frac{P_{10/1}}{P_{10/1(O)}}=\mathbf{0.519640635885235}$
+  * $\displaystyle w_{\text{BTC}}^{(\mathrm{cap},OCT)}\times\frac{P_{10/1}}{P_{r(OCT)}}=\mathbf{0.519640635885235}$
 * **ETH**:
-  * $\displaystyle w_{\text{ETH}}^{(10/1,\mathrm{cap})}=0.23885866123882363$
-  * $\displaystyle \frac{P_{\text{ETH},10/1}}{P_{\text{ETH},10/1(O)}}
+  * $\displaystyle w_{\text{ETH}}^{(\mathrm{cap},OCT)}=0.23885866123882363$
+  * $\displaystyle \frac{P_{\text{ETH},10/1}}{P_{\text{ETH},r(OCT)}}
     =\frac{\mathbf{4343.951983440489130}}{\mathbf{4144.230463371581209}}
     =\mathbf{1.048192667332121}$
-  * $\displaystyle w_{\text{ETH}}^{(10/1,\mathrm{cap})}\times\frac{P_{10/1}}{P_{10/1(O)}}=\mathbf{0.250369897239302}$
+  * $\displaystyle w_{\text{ETH}}^{(\mathrm{cap},OCT)}\times\frac{P_{10/1}}{P_{r(OCT)}}=\mathbf{0.250369897239302}$
 * **XRP**:
-  * $\displaystyle w_{\text{XRP}}^{(10/1,\mathrm{cap})}=0.08126670985348254$
-  * $\displaystyle \frac{P_{\text{XRP},10/1}}{P_{\text{XRP},10/1(O)}}
+  * $\displaystyle w_{\text{XRP}}^{(\mathrm{cap},OCT)}=0.08126670985348254$
+  * $\displaystyle \frac{P_{\text{XRP},10/1}}{P_{\text{XRP},r(OCT)}}
     =\frac{\mathbf{2.944797512076650}}{\mathbf{2.844933401817261}}
     =\mathbf{1.035102442185676}$
-  * $\displaystyle w_{\text{XRP}}^{(10/1,\mathrm{cap})}\times\frac{P_{10/1}}{P_{10/1(O)}}=\mathbf{0.084119369837735}$
+  * $\displaystyle w_{\text{XRP}}^{(\mathrm{cap},OCT)}\times\frac{P_{10/1}}{P_{r(OCT)}}=\mathbf{0.084119369837735}$
 * **BNB**:
-  * $\displaystyle w_{\text{BNB}}^{(10/1,\mathrm{cap})}=0.06703093399646864$
-  * $\displaystyle \frac{P_{\text{BNB},10/1}}{P_{\text{BNB},10/1(O)}}
+  * $\displaystyle w_{\text{BNB}}^{(\mathrm{cap},OCT)}=0.06703093399646864$
+  * $\displaystyle \frac{P_{\text{BNB},10/1}}{P_{\text{BNB},r(OCT)}}
     =\frac{\mathbf{1025.818785012324724}}{\mathbf{1008.922531171410355}}
     =\mathbf{1.016746829730621}$
-  * $\displaystyle w_{\text{BNB}}^{(10/1,\mathrm{cap})}\times\frac{P_{10/1}}{P_{10/1(O)}}=\mathbf{0.068153489634792}$
+  * $\displaystyle w_{\text{BNB}}^{(\mathrm{cap},OCT)}\times\frac{P_{10/1}}{P_{r(OCT)}}=\mathbf{0.068153489634792}$
 * **SOL**:
-  * $\displaystyle w_{\text{SOL}}^{(10/1,\mathrm{cap})}=0.05416309452567625$
-  * $\displaystyle \frac{P_{\text{SOL},10/1}}{P_{\text{SOL},10/1(O)}}
+  * $\displaystyle w_{\text{SOL}}^{(\mathrm{cap},OCT)}=0.05416309452567625$
+  * $\displaystyle \frac{P_{\text{SOL},10/1}}{P_{\text{SOL},r(OCT)}}
     =\frac{\mathbf{221.218883338975502}}{\mathbf{208.699294488173308}}
     =\mathbf{1.059988649609506}$
-  * $\displaystyle w_{\text{SOL}}^{(10/1,\mathrm{cap})}\times\frac{P_{10/1}}{P_{10/1(O)}}=\mathbf{0.057412265424944}$
+  * $\displaystyle w_{\text{SOL}}^{(\mathrm{cap},OCT)}\times\frac{P_{10/1}}{P_{r(OCT)}}=\mathbf{0.057412265424944}$
 * **TRX**:
-  * $\displaystyle w_{\text{TRX}}^{(10/1,\mathrm{cap})}=0.015073605946657255$
-  * $\displaystyle \frac{P_{\text{TRX},10/1}}{P_{\text{TRX},10/1(O)}}
+  * $\displaystyle w_{\text{TRX}}^{(\mathrm{cap},OCT)}=0.015073605946657255$
+  * $\displaystyle \frac{P_{\text{TRX},10/1}}{P_{\text{TRX},r(OCT)}}
     =\frac{\mathbf{0.341791716791851}}{\mathbf{0.333500157269788}}
     =\mathbf{1.024862235718094}$
-  * $\displaystyle w_{\text{TRX}}^{(10/1,\mathrm{cap})}\times\frac{P_{10/1}}{P_{10/1(O)}}=\mathbf{0.015448369490825}$
+  * $\displaystyle w_{\text{TRX}}^{(\mathrm{cap},OCT)}\times\frac{P_{10/1}}{P_{r(OCT)}}=\mathbf{0.015448369490825}$
 * **DOGE**:
-  * $\displaystyle w_{\text{DOGE}}^{(10/1,\mathrm{cap})}=0.016795357217090846$
-  * $\displaystyle \frac{P_{\text{DOGE},10/1}}{P_{\text{DOGE},10/1(O)}}
+  * $\displaystyle w_{\text{DOGE}}^{(\mathrm{cap},OCT)}=0.016795357217090846$
+  * $\displaystyle \frac{P_{\text{DOGE},10/1}}{P_{\text{DOGE},r(OCT)}}
     =\frac{\mathbf{0.248066930177501}}{\mathbf{0.232770385301574}}
     =\mathbf{1.065715167572151}$
-  * $\displaystyle w_{\text{DOGE}}^{(10/1,\mathrm{cap})}\times\frac{P_{10/1}}{P_{10/1(O)}}=\mathbf{0.017899066931046}$
+  * $\displaystyle w_{\text{DOGE}}^{(\mathrm{cap},OCT)}\times\frac{P_{10/1}}{P_{r(OCT)}}=\mathbf{0.017899066931046}$
 * **ADA**:
-  * $\displaystyle w_{\text{ADA}}^{(10/1,\mathrm{cap})}=0.014054728615644059$
-  * $\displaystyle \frac{P_{\text{ADA},10/1}}{P_{\text{ADA},10/1(O)}}
+  * $\displaystyle w_{\text{ADA}}^{(\mathrm{cap},OCT)}=0.014054728615644059$
+  * $\displaystyle \frac{P_{\text{ADA},10/1}}{P_{\text{ADA},r(OCT)}}
     =\frac{\mathbf{0.849177301515390}}{\mathbf{0.806863785307213}}
     =\mathbf{1.052441957339883}$
-  * $\displaystyle w_{\text{ADA}}^{(10/1,\mathrm{cap})}\times\frac{P_{10/1}}{P_{10/1(O)}}=\mathbf{0.014791786094129}$
+  * $\displaystyle w_{\text{ADA}}^{(\mathrm{cap},OCT)}\times\frac{P_{10/1}}{P_{r(OCT)}}=\mathbf{0.014791786094129}$
 * **LINK**:
-  * $\displaystyle w_{\text{LINK}}^{(10/1,\mathrm{cap})}=0.00690712909513855$
-  * $\displaystyle \frac{P_{\text{LINK},10/1}}{P_{\text{LINK},10/1(O)}}
+  * $\displaystyle w_{\text{LINK}}^{(\mathrm{cap},OCT)}=0.00690712909513855$
+  * $\displaystyle \frac{P_{\text{LINK},10/1}}{P_{\text{LINK},r(OCT)}}
     =\frac{\mathbf{22.577894311182035}}{\mathbf{21.326800638475884}}
     =\mathbf{1.058662979689933}$
-  * $\displaystyle w_{\text{LINK}}^{(10/1,\mathrm{cap})}\times\frac{P_{10/1}}{P_{10/1(O)}}=\mathbf{0.007312321868962}$
+  * $\displaystyle w_{\text{LINK}}^{(\mathrm{cap},OCT)}\times\frac{P_{10/1}}{P_{r(OCT)}}=\mathbf{0.007312321868962}$
 * **HYPE**:
-  * $\displaystyle w_{\text{HYPE}}^{(10/1,\mathrm{cap})}=0.005849779511018379$
-  * $\displaystyle \frac{P_{\text{HYPE},10/1}}{P_{\text{HYPE},10/1(O)}}
+  * $\displaystyle w_{\text{HYPE}}^{(\mathrm{cap},OCT)}=0.005849779511018379$
+  * $\displaystyle \frac{P_{\text{HYPE},10/1}}{P_{\text{HYPE},r(OCT)}}
     =\frac{\mathbf{47.111017596069502}}{\mathbf{45.243659922432194}}
     =\mathbf{1.041273355799217}$
-  * $\displaystyle w_{\text{HYPE}}^{(10/1,\mathrm{cap})}\times\frac{P_{10/1}}{P_{10/1(O)}}=\mathbf{0.006091219542124}$
+  * $\displaystyle w_{\text{HYPE}}^{(\mathrm{cap},OCT)}\times\frac{P_{10/1}}{P_{r(OCT)}}=\mathbf{0.006091219542124}$
 
 求和与指数：
 
 $$
-\sum_i w_i^{(10/1,\mathrm{cap})}\cdot\frac{P_{i,10/1}}{P_{i,10/1(O)}}
+\sum_i w_i^{(\mathrm{cap},OCT)}\cdot\frac{P_{i,10/1}}{P_{i,r(OCT)}}
 =\boxed{\mathbf{1.041238421949093}}
 $$
 
