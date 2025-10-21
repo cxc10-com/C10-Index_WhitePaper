@@ -1,4 +1,4 @@
-# C10 Index 加权加密货币指数 — 白皮书（v1.6）
+# C10 Index 加权加密货币指数 — 白皮书（v1.7）
 
 **日期**：2025-10-18
 **发起方**：CXC10
@@ -348,25 +348,31 @@ $$
 
 ### 12.1 基准设定与指数公式
 
-以 2025.9.1 为基准日（UTC 0 点），基准指数 $I_{9/1(O)}=1000$。
+以 2025.9.1 为基准日（UTC 0 点），基准指数 $I_{t0} = I_{r(SEP)} = I_{9/1(O)} =1000$。
 
 $$
 I_t = I_r \cdot \sum_{i\in C} w_i^{(r,\mathrm{cap})}\cdot \frac{P_{i,t}}{P_{i,r}}
 $$
 
-### 12.2 2025年9月再平衡（9/1）
+### 12.2 2025年9月的权重再平衡
 
-#### 12.2.1 自然权重计算
+9月1日 UTC 0点发生权重再平衡。
+#### 12.2.1 9月的自然权重计算
 
-自然权重（由当刻自由流通市值）：
+自然权重：
 
 $$
 \begin{aligned}
-w_{i}^{(9/1,\mathrm{nat})}
-&=\frac{\mathrm{MarketCap}_{i,9/1(O)}}{\displaystyle\sum_{j\in C_{9/1}}\mathrm{MarketCap}_{j,9/1(O)}}
-\,\quad
-\sum\limits_{j\in C_{9/1}}\mathrm{MarketCap}_{j,9/1(O)}&=3200565092014.6787
+w_{i}^{(\mathrm{nat},SEP)}
+&=\frac{\mathrm{MarketCap}_{i,r(SEP)}}{\displaystyle\sum_{j\in C_{SEP}}\mathrm{MarketCap}_{j,r(SEP)}}
 \end{aligned}
+$$
+
+其中，
+
+$$
+\sum\limits_{j\in C_{SEP}}\mathrm{MarketCap}_{j,r(SEP)}=\sum\limits_{j\in C_{SEP}}\mathrm{MarketCap}_{j,9/1(O)}=3200565092014.6787
+
 $$
 
 * **BTC**:
@@ -390,16 +396,16 @@ $$
 * **HYPE**:
     * $\displaystyle \frac{12019447926.61887}{3200565092014.6787} = 0.0037554143037450043$
 
-#### 12.2.2 施加50%上限与迭代再分配
+#### 12.2.2 9月的约束权重计算
 
 约束权重：
 
 $$
-w_i^{\mathrm{cap}} =
+w_i^{(cap,SEP)} =
 \begin{cases}
 0.5, & i=\text{BTC}\\
-w_i^{(9/1,\mathrm{nat})} +
-\dfrac{w_i^{(9/1,\mathrm{nat})}}{\displaystyle\sum_{k\in U} w_k^{\mathrm{nat}}}E, & i \in U
+w_i^{(\mathrm{nat},SEP)} +
+\dfrac{w_i^{(\mathrm{nat},SEP)}}{\displaystyle\sum_{k\in U} w_k^{(\mathrm{nat},SEP)}}E, & i \in U
 \end{cases}
 $$
 
@@ -410,7 +416,7 @@ E=0.6735357396942176-0.5=0.17353573969421765
 $$
 
 $$
-\sum_{k\in U} w_k^{\mathrm{nat}}=1-0.6735357396942176=0.32646426030578235
+\sum_{k\in U} w_k^{(\mathrm{nat},SEP)}=1-0.6735357396942176=0.32646426030578235
 $$
 
 逐项计算：
@@ -457,27 +463,27 @@ $$
 校验求和：
 
 $$
-\sum_i w_{i}^{\mathrm{cap}}
+\sum_i w_{i}^{(\mathrm{cap},SEP)}
 = 0.5+0.25349565720340056+0.07905265340622734+0.05713410667298138+0.051988037606201604\\
 +0.015435617907050107+0.015420251669273487+0.01417338243209835\\
 +0.007548646199324495+0.0057516469034428145
 = 1.0000000000000002
 $$
 
-#### 12.2.3 权重归一化使 $\sum_i w_i^{\mathrm{cap}}=1$
+##### 12.2.2.1 权重归一化使 $\sum_i w_i^{\mathrm{cap}}=1$
 
-经过 6.3 节计算，得到一组暂态约束权重 $\widehat{w}_i^{9/1}$（即上节输出的 $w_i^{\mathrm{cap}}$），其中
-
-$$
-\sum_i \widehat{w}_{i}^{9/1}=\mathbf{1.0000000000000002}
-$$
+经过 6.3 节计算，得到一组暂态约束权重 $\widehat{w}_i^{SEP}$（即上节输出的 $w_i^{(\mathrm{cap,SEP})}$），其中
 
 $$
-S_O=\sum_{i\in O}\widehat{w}_{i}^{9/1}=\mathbf{0.5}
+\sum_i \widehat{w}_{i}^{SEP}=\mathbf{1.0000000000000002}
 $$
 
 $$
-S_U=\sum_{i\in U}\widehat{w}_{i}^{9/1}=\mathbf{0.5000000000000002}
+S_O=\sum_{i\in O}\widehat{w}_{i}^{SEP}=\mathbf{0.5}
+$$
+
+$$
+S_U=\sum_{i\in U}\widehat{w}_{i}^{SEP}=\mathbf{0.5000000000000002}
 $$
 
 归一化系数（只对"非 BTC"部分做等比缩放）：
@@ -492,41 +498,41 @@ $$
 最终权重：
 
 $$
-w_i^{(9/1,\mathrm{cap})} =
+w_i^{(\mathrm{cap},SEP)} =
 \begin{cases}
 0.5, & i\in O\\
-\alpha\cdot\widehat{w}_{i}^{9/1}, & i\in U
+\alpha\cdot\widehat{w}_{i}^{SEP}, & i\in U
 \end{cases}
 $$
 
 逐项归一化结果（完整小数）：
 
 * **BTC**:
-  * $\displaystyle \widehat{w}^{9/1}_{\text{BTC}} = \mathbf{0.5}$
+  * $\displaystyle \widehat{w}^{SEP}_{\text{BTC}} = \mathbf{0.5}$
 * **ETH**:
-  * $\displaystyle \widehat{w}^{9/1}_{\text{ETH}}\times \alpha = 0.25349565720340056 \times 0.9999999999999996 = \mathbf{0.25349565720340045}$
+  * $\displaystyle \widehat{w}^{SEP}_{\text{ETH}}\times \alpha = 0.25349565720340056 \times 0.9999999999999996 = \mathbf{0.25349565720340045}$
 * **XRP**:
-  * $\displaystyle \widehat{w}^{9/1}_{\text{XRP}}\times \alpha = 0.07905265340622734 \times 0.9999999999999996 = \mathbf{0.0790526534062273}$
+  * $\displaystyle \widehat{w}^{SEP}_{\text{XRP}}\times \alpha = 0.07905265340622734 \times 0.9999999999999996 = \mathbf{0.0790526534062273}$
 * **BNB**:
-  * $\displaystyle \widehat{w}^{9/1}_{\text{BNB}}\times \alpha = 0.05713410667298138 \times 0.9999999999999996 = \mathbf{0.057134106672981355}$
+  * $\displaystyle \widehat{w}^{SEP}_{\text{BNB}}\times \alpha = 0.05713410667298138 \times 0.9999999999999996 = \mathbf{0.057134106672981355}$
 * **SOL**:
-  * $\displaystyle \widehat{w}^{9/1}_{\text{SOL}}\times \alpha = 0.051988037606201604 \times 0.9999999999999996 = \mathbf{0.05198803760620158}$
+  * $\displaystyle \widehat{w}^{SEP}_{\text{SOL}}\times \alpha = 0.051988037606201604 \times 0.9999999999999996 = \mathbf{0.05198803760620158}$
 * **TRX**:
-  * $\displaystyle \widehat{w}^{9/1}_{\text{TRX}}\times \alpha = 0.015435617907050107 \times 0.9999999999999996 = \mathbf{0.0154356179070501}$
+  * $\displaystyle \widehat{w}^{SEP}_{\text{TRX}}\times \alpha = 0.015435617907050107 \times 0.9999999999999996 = \mathbf{0.0154356179070501}$
 * **DOGE**:
-  * $\displaystyle \widehat{w}^{9/1}_{\text{DOGE}}\times \alpha = 0.015420251669273487 \times 0.9999999999999996 = \mathbf{0.01542025166927348}$
+  * $\displaystyle \widehat{w}^{SEP}_{\text{DOGE}}\times \alpha = 0.015420251669273487 \times 0.9999999999999996 = \mathbf{0.01542025166927348}$
 * **ADA**:
-  * $\displaystyle \widehat{w}^{9/1}_{\text{ADA}}\times \alpha = 0.01417338243209835 \times 0.9999999999999996 = \mathbf{0.014173382432098343}$
+  * $\displaystyle \widehat{w}^{SEP}_{\text{ADA}}\times \alpha = 0.01417338243209835 \times 0.9999999999999996 = \mathbf{0.014173382432098343}$
 * **LINK**:
-  * $\displaystyle \widehat{w}^{9/1}_{\text{LINK}}\times \alpha = 0.007548646199324495 \times 0.9999999999999996 = \mathbf{0.007548646199324492}$
+  * $\displaystyle \widehat{w}^{SEP}_{\text{LINK}}\times \alpha = 0.007548646199324495 \times 0.9999999999999996 = \mathbf{0.007548646199324492}$
 * **HYPE**:
-  * $\displaystyle \widehat{w}^{9/1}_{\text{HYPE}}\times \alpha = 0.0057516469034428145 \times 0.9999999999999996 = \mathbf{0.005751646903442812}$
+  * $\displaystyle \widehat{w}^{SEP}_{\text{HYPE}}\times \alpha = 0.0057516469034428145 \times 0.9999999999999996 = \mathbf{0.005751646903442812}$
 
 
 归一化校验（构造上精确满足）：
 
 $$
-\sum_{i}w_i^{(9/1,\mathrm{cap})}
+\sum_{i}w_i^{(\mathrm{cap},SEP)}
 =\underbrace{S_O\times 1}_{=0.5}
 +\underbrace{S_U\times \alpha}_{=0.5000000000000002\times 0.9999999999999996=0.5}
 =\mathbf{1}
@@ -534,84 +540,83 @@ $$
 
 > 说明：这样处理严格满足"BTC=50% 不变"的设限，同时把其余成分按同一系数 $\alpha$ 等比缩放，使总权重精确为 1。
 
-#### 12.2.4 9/1收盘指数计算
+### 12.3 2025年9月的指数计算示例
+
+#### 12.3.1 9月1日收盘指数$I_{9/1}$
 
 公式
 
 $$
 I_{9/1}
-= I_{9/1(O)}\cdot \sum_{i\in C_{9/1}} w_i^{(9/1,\mathrm{cap})}\cdot
-\frac{P_{i,\mathbf{9/1}}}{P_{i,\mathbf{9/1(O)}}},\qquad
-I_{9/1(O)}=1000
+= I_{r(SEP)}\cdot \sum_{i\in C_{SEP}} w_i^{(\mathrm{cap},SEP)}\cdot
+\frac{P_{i,\mathbf{9/1}}}{P_{i,r(SEP)}}
 $$
 
-> 注：**“9/1 收盘价”= 9/2 00:00 UTC。O为开盘价。**
-
 * **BTC**:
-  * $\displaystyle w_{\text{BTC}}^{(9/1,\mathrm{cap})}=0.5$
+  * $\displaystyle w_{\text{BTC}}^{(cap,SEP)}=0.5$
   * $\displaystyle \frac{P_{\text{BTC},9/1}}{P_{\text{BTC},9/1(O)}}
     =\frac{\mathbf{109162.68557992298}}{\mathbf{108253.36092385623}}
     =\mathbf{1.0083999669692136}$
-  * $\displaystyle w_{\text{BTC}}^{(9/1,\mathrm{cap})}\times\frac{P_{9/1}}{P_{9/1(O)}}=\mathbf{0.5041999834846068}$
+  * $\displaystyle w_{\text{BTC}}^{(cap,SEP)}\times\frac{P_{9/1}}{P_{r(SEP)}}=\mathbf{0.5041999834846068}$
 * **ETH**:
-  * $\displaystyle w_{\text{ETH}}^{(9/1,\mathrm{cap})}=0.25349565720340045$
+  * $\displaystyle w_{\text{ETH}}^{(cap,SEP)}=0.25349565720340045$
   * $\displaystyle \frac{P_{\text{ETH},9/1}}{P_{\text{ETH},9/1(O)}}
     =\frac{\mathbf{4303.202222745541}}{\mathbf{4388.931464519364}}
     =\mathbf{0.9804669445246825}$
-  * $\displaystyle w_{\text{ETH}}^{(9/1,\mathrm{cap})}\times\frac{P_{9/1}}{P_{9/1(O)}}=\mathbf{0.24854411246849437}$
+  * $\displaystyle w_{\text{ETH}}^{(cap,SEP)}\times\frac{P_{9/1}}{P_{r(SEP)}}=\mathbf{0.24854411246849437}$
 * **XRP**:
-  * $\displaystyle w_{\text{XRP}}^{(9/1,\mathrm{cap})}=0.0790526534062273$
+  * $\displaystyle w_{\text{XRP}}^{(cap,SEP)}=0.0790526534062273$
   * $\displaystyle \frac{P_{\text{XRP},9/1}}{P_{\text{XRP},9/1(O)}}
     =\frac{\mathbf{2.752094842681695}}{\mathbf{2.776712609891609}}
     =\mathbf{0.9901280646537916}$
-  * $\displaystyle w_{\text{XRP}}^{(9/1,\mathrm{cap})}\times\frac{P_{9/1}}{P_{9/1(O)}}=\mathbf{0.07827852787876354}$
+  * $\displaystyle w_{\text{XRP}}^{(cap,SEP)}\times\frac{P_{9/1}}{P_{r(SEP)}}=\mathbf{0.07827852787876354}$
 * **BNB**:
-  * $\displaystyle w_{\text{BNB}}^{(9/1,\mathrm{cap})}=0.057134106672981355$
+  * $\displaystyle w_{\text{BNB}}^{(cap,SEP)}=0.057134106672981355$
   * $\displaystyle \frac{P_{\text{BNB},9/1}}{P_{\text{BNB},9/1(O)}}
     =\frac{\mathbf{1005.574831704243}}{\mathbf{1002.251682003274}}
     =\mathbf{1.0033150266045858}$
-  * $\displaystyle w_{\text{BNB}}^{(9/1,\mathrm{cap})}\times\frac{P_{9/1}}{P_{9/1(O)}}=\mathbf{0.05732380867156660}$
+  * $\displaystyle w_{\text{BNB}}^{(cap,SEP)}\times\frac{P_{9/1}}{P_{r(SEP)}}=\mathbf{0.05732380867156660}$
 * **SOL**:
-  * $\displaystyle w_{\text{SOL}}^{(9/1,\mathrm{cap})}=0.05198803760620158$
+  * $\displaystyle w_{\text{SOL}}^{(cap,SEP)}=0.05198803760620158$
   * $\displaystyle \frac{P_{\text{SOL},9/1}}{P_{\text{SOL},9/1(O)}}
     =\frac{\mathbf{197.66270682973027}}{\mathbf{205.12838610102386}}
     =\mathbf{0.9635576989422688}$
-  * $\displaystyle w_{\text{SOL}}^{(9/1,\mathrm{cap})}\times\frac{P_{9/1}}{P_{9/1(O)}}=\mathbf{0.05007036893063023}$
+  * $\displaystyle w_{\text{SOL}}^{(cap,SEP)}\times\frac{P_{9/1}}{P_{r(SEP)}}=\mathbf{0.05007036893063023}$
 * **TRX**:
-  * $\displaystyle w_{\text{TRX}}^{(9/1,\mathrm{cap})}=0.0154356179070501$
+  * $\displaystyle w_{\text{TRX}}^{(cap,SEP)}=0.0154356179070501$
   * $\displaystyle \frac{P_{\text{TRX},9/1}}{P_{\text{TRX},9/1(O)}}
     =\frac{\mathbf{0.323681332993614}}{\mathbf{0.332362570767100}}
     =\mathbf{0.9738575385126106}$
-  * $\displaystyle w_{\text{TRX}}^{(9/1,\mathrm{cap})}\times\frac{P_{9/1}}{P_{9/1(O)}}=\mathbf{0.01503470306394761}$
+  * $\displaystyle w_{\text{TRX}}^{(cap,SEP)}\times\frac{P_{9/1}}{P_{r(SEP)}}=\mathbf{0.01503470306394761}$
 * **DOGE**:
-  * $\displaystyle w_{\text{DOGE}}^{(9/1,\mathrm{cap})}=0.01542025166927348$
+  * $\displaystyle w_{\text{DOGE}}^{(cap,SEP)}=0.01542025166927348$
   * $\displaystyle \frac{P_{\text{DOGE},9/1}}{P_{\text{DOGE},9/1(O)}}
     =\frac{\mathbf{0.241441506427685}}{\mathbf{0.243231957517967}}
     =\mathbf{0.9926462740767630}$
-  * $\displaystyle w_{\text{DOGE}}^{(9/1,\mathrm{cap})}\times\frac{P_{9/1}}{P_{9/1(O)}}=\mathbf{0.01530754444936604}$
+  * $\displaystyle w_{\text{DOGE}}^{(cap,SEP)}\times\frac{P_{9/1}}{P_{r(SEP)}}=\mathbf{0.01530754444936604}$
 * **ADA**:
-  * $\displaystyle w_{\text{ADA}}^{(9/1,\mathrm{cap})}=0.014173382432098343$
+  * $\displaystyle w_{\text{ADA}}^{(cap,SEP)}=0.014173382432098343$
   * $\displaystyle \frac{P_{\text{ADA},9/1}}{P_{\text{ADA},9/1(O)}}
     =\frac{\mathbf{0.803044535123922}}{\mathbf{0.814881556780723}}
     =\mathbf{0.9853985136344930}$
-  * $\displaystyle w_{\text{ADA}}^{(9/1,\mathrm{cap})}\times\frac{P_{9/1}}{P_{9/1(O)}}=\mathbf{0.013959113371730603}$
+  * $\displaystyle w_{\text{ADA}}^{(cap,SEP)}\times\frac{P_{9/1}}{P_{r(SEP)}}=\mathbf{0.013959113371730603}$
 * **LINK**:
-  * $\displaystyle w_{\text{LINK}}^{(9/1,\mathrm{cap})}=0.007548646199324492$
+  * $\displaystyle w_{\text{LINK}}^{(cap,SEP)}=0.007548646199324492$
   * $\displaystyle \frac{P_{\text{LINK},9/1}}{P_{\text{LINK},9/1(O)}}
     =\frac{\mathbf{22.440918059371164}}{\mathbf{23.229075217478396}}
     =\mathbf{0.9660702309184399}$
-  * $\displaystyle w_{\text{LINK}}^{(9/1,\mathrm{cap})}\times\frac{P_{9/1}}{P_{9/1(O)}}=\mathbf{0.007292522376903016}$
+  * $\displaystyle w_{\text{LINK}}^{(cap,SEP)}\times\frac{P_{9/1}}{P_{r(SEP)}}=\mathbf{0.007292522376903016}$
 * **HYPE**:
-  * $\displaystyle w_{\text{HYPE}}^{(9/1,\mathrm{cap})}=0.005751646903442812$
+  * $\displaystyle w_{\text{HYPE}}^{(cap,SEP)}=0.005751646903442812$
   * $\displaystyle \frac{P_{\text{HYPE},9/1}}{P_{\text{HYPE},9/1(O)}}
     =\frac{\mathbf{43.030960057683984}}{\mathbf{44.30452855074537}}
     =\mathbf{0.9712542140787556}$
-  * $\displaystyle w_{\text{HYPE}}^{(9/1,\mathrm{cap})}\times\frac{P_{9/1}}{P_{9/1(O)}}=\mathbf{0.005586311292861857}$
+  * $\displaystyle w_{\text{HYPE}}^{(cap,SEP)}\times\frac{P_{9/1}}{P_{r(SEP)}}=\mathbf{0.005586311292861857}$
 
 求和与指数：
 
 $$
-\sum_i w_i^{(9/1,\mathrm{cap})}\cdot\frac{P_{i,9/1}}{P_{i,9/1(O)}}
+\sum_i w_i^{(\mathrm{cap},SEP)}\cdot\frac{P_{i,9/1}}{P_{i,r(SEP)}}
 =\mathbf{0.9956529534972314798}
 $$
 
@@ -621,9 +626,7 @@ I_{9/1}
 =\boxed{\mathbf{995.6529534972315}}
 $$
 
-> 解释：这是 **9/1 一天的收盘指数**（区间 9/01 00:00 → 9/02 00:00，UTC），**沿用 9/1 权重**按“收盘/开盘”的线性相对法滚动得到的数值。
-
-#### 12.2.5 9/30收盘指数计算
+#### 12.3.2 9月30日收盘指数$I_{9/30}$
 
 $$
 I_{9/30} = I_{9/1(O)}\cdot \sum_{i\in C_{9/1}} w_i^{(9/1,\mathrm{cap})} \cdot \frac{P_{i,9/30}}{P_{i,9/1(O)}},
@@ -686,12 +689,15 @@ I_{9/30}=1000\times 1.027002814493407
 =\boxed{1027.002814493407}
 $$
 
-> 说明：数值仅在 $10^{-13}$ 量级微调（由归一化引起），口径上满足"**BTC=50% 严格不变**、其余等比缩放、**权重和=1**"。
+### 12.4 2025年10月的指数计算示例
 
+#### 12.4.1 10月的指数基准值
 
-### 12.3 2025年10月再平衡（10/1）
+$$
+I_{r} = I_{10/1(O)} = I_{9/30} = 1027.002814493407
+$$
 
-#### 12.3.1 10月的权重触顶后，按比例分配完的权重为：
+#### 12.4.2 10月的约束权重
 
 * **BTC**:
   * $\displaystyle w_{\text{BTC}}^{(10/1,\mathrm{cap})}=0.5$
@@ -714,15 +720,13 @@ $$
 * **HYPE**:
   * $\displaystyle w_{\text{HYPE}}^{(10/1,\mathrm{cap})}=0.005849779511018379$
 
-#### 12.3.2 10/1收盘指数计算（**使用 10/1 新权重**）
+#### 12.4.3 10月1日收盘指数$I_{10/1}$
 
 $$
 I_{10/1}
 = I_{10/1(O)}\cdot
 \sum_{i\in C} w_i^{(10/1,\mathrm{cap})}\cdot
-\frac{P_{i,10/1}}{P_{i,10/1(O)}},
-\qquad
-I_{9/30}=I_{10/1(O)}=\mathbf{1027.002814493407}
+\frac{P_{i,10/1}}{P_{i,10/1(O)}}
 $$
 
 * **BTC**:
@@ -786,7 +790,6 @@ $$
     =\mathbf{1.041273355799217}$
   * $\displaystyle w_{\text{HYPE}}^{(10/1,\mathrm{cap})}\times\frac{P_{10/1}}{P_{10/1(O)}}=\mathbf{0.006091219542124}$
 
-
 求和与指数：
 
 $$
@@ -794,10 +797,8 @@ $$
 =\boxed{\mathbf{1.041238421949093}}
 $$
 
-
 $$
 I_{10/1}
 =\mathbf{1027.002814493407}\times \mathbf{1.041238421949093}
 =\boxed{\mathbf{1069.354789900392545}}
 $$
-
