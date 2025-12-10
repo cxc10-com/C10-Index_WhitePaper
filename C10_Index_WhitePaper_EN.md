@@ -1,4 +1,4 @@
-# C10 Index 加权加密货币指数 — 白皮书（En）
+# C10 Index Free-Float Market-Cap Weighted Cryptocurrency Index — Whitepaper
 
 **Date**：2025-10-18
 **Sponsor**：CXC10
@@ -8,7 +8,7 @@
 
 ## 1. Overview
 
-C10 Index 加权加密货币指数（以下简称“指数”）衡量按**自由流通市值**排名前十的加密资产（不含稳定币、包装代币和质押凭证）的整体表现，并通过**修正市值加权**限制单一资产集中度。指数设定**单一成分权重上限为 50%**，适用于基准衡量、投资组合构建及相关产品复制。
+The C10 Index**Free-Float Market-Cap**Weighted Cryptocurrency Index (the “Index”) measures the performance of the top ten cryptoassets by free-float market capitalization (excluding stablecoins, wrapped tokens, and staking receipts). The Index employs **a modified market capitalization weighting**scheme to limit concentration in any single asset. **A maximum single-constituent weight of 50% is imposed**, making the Index suitable for benchmarking, portfolio construction, and index-linked products.
 
 ## 2. Index Summary
 
@@ -26,12 +26,12 @@ C10 Index 加权加密货币指数（以下简称“指数”）衡量按**自�
 ### 3.1 Inclusion Criteria
 
 1. Listed on at least two qualified exchanges with transparent and auditable market data.
-2. 可获得 USD 计价价格（直接或通过主流 USD 稳定币对）
+2. A reliable USD-denominated price is available, either directly or via a major USD stablecoin trading pair
 3. Liquidity: the median daily trading volume over the past 90 calendar days is at least USD 10 million, with at least 85 days of valid (non-zero) trading
 4. Free-float supply data can be independently verified
-5. 在初始及持续基础上，该基础商品在属于 Intermarket Surveillance Group（“ISG”）成员的市场上交易，且指数所对应的挂牌交易所能够从该 ISG 成员处获取与该商品相关的交易及监管信息；
-6. 在初始及持续基础上，该基础商品作为期货合约的标的资产，且该期货合约已在指定合约市场（Designated Contract Market，“DCM”）连续上市交易至少六个月，同时指数所对应的挂牌交易所与该 DCM 之间存在全面的监管信息共享安排（包括直接签署的监管共享协议，或通过双方同为 ISG 成员实现的信息共享）；
-7. 在初始基础上，存在一只交易型开放式指数基金（ETF）已在全国性证券交易所上市交易，且该 ETF 对该基础商品的经济敞口不低于其净资产价值的 40%。
+5. On an initial and continuing basis, the underlying commodity (cryptoasset) trades on a market that is a member of the Intermarket Surveillance Group (“ISG”), and the exchange on which an Index-linked product is listed can obtain relevant trading and surveillance information on such commodity from that ISG member
+6. On an initial and continuing basis, the underlying commodity is the reference asset of a futures contract that has been available to trade on a Designated Contract Market (“DCM”) for at least six months, and the exchange on which an Index-linked product is listed maintains a comprehensive surveillance-sharing arrangement with such DCM (including a direct surveillance-sharing agreement or an arrangement achieved via both parties being ISG members)
+7. On an initial basis, there exists an exchange-traded fund (“ETF”) listed and traded on a national securities exchange that maintains economic exposure of no less than 40% of its net asset value to such underlying commodity
 
 ### 3.2 Exclusion Rules
 
@@ -156,7 +156,7 @@ $$
 D=\frac{\sum_{i\in C} AS_i^{(r,nat)}P_{i,r}}{I_r},
 $$
 
-从而 5.5 的初始定标（with $r=t_0$）与 5.6 的再平衡接平在同一表达式下统一。
+which unifies the initial calibration in Section 5.5（with $r=t_0$）and the rebalancing continuity condition in Section 5.6 under a single expression
 
 Substituting into the Index formula:
 
@@ -177,14 +177,14 @@ I_t
 \sum_{i\in C}\frac{AS_i^{(r,nat)} P_{i,t}}{\sum_{j\in C} AS_j^{(r,nat)} P_{j,r}}
 $$
 
-对分子逐项同时除以基期价格 $P_{i,r}$：
+Dividing each term in the numerator by the base price $P_{i,r}$：
 
 $$
 AS_i^{(r,nat)} P_{i,t}
 = AS_i^{(r,nat)}\left(P_{i,r}\cdot \frac{P_{i,t}}{P_{i,r}}\right)\
-= \underbrace{\big(AS_i^{(r,nat)} P_{i,r}\big)}_{\text{基期的流通市值}}
+= \underbrace{\big(AS_i^{(r,nat)} P_{i,r}\big)}_{\text{Base-period free-float market cap}}
 \cdot
-\underbrace{\frac{P_{i,t}}{P_{i,r}}}_{\text{价格收益}}
+\underbrace{\frac{P_{i,t}}{P_{i,r}}}_{\text{Price return}}
 $$
 
 Hence:
@@ -196,7 +196,7 @@ I_t
 = I_r \cdot \sum_{i\in C}
 \underbrace{\frac{AS_i^{(r,nat)}P_{i,r}}{\sum_{j\in C} AS_j^{(r,nat)}P_{j,r}}}_{w_i^{(r,nat)}}
 \cdot
-\underbrace{\frac{P_{i,t}}{P_{i,r}}}_{\text{价格收益}}
+\underbrace{\frac{P_{i,t}}{P_{i,r}}}_{\text{Price return}}
 $$
 
 Let
@@ -212,20 +212,20 @@ $$
 I_t = I_r \cdot \sum_{i\in C} w_i^{(r,nat)} \cdot \frac{P_{i,t}}{P_{i,r}}
 $$
 
-> 解释：指数等于**基期点位**乘以**加权价格变化**；此处 $w_i^{(r,nat)}$ 为再平衡基点的**自然权重**。
+> Interpretation: The Index equals the**base index level**multiplied by the**weighted price change**；Here, $w_i^{(r,nat)}$ denotes the**natural weight**at the rebalancing base time.
 
 ## 6. Weighting and Constraints
 
-采用 **自由流通市值加权(Free-Float MCAP)** 并施加约束。
+The Index uses **free-float market capitalization weighting(Free-Float MCAP)** subject to constraints.
 
 ### 6.1 Notation and Setup
 
-* $C$：本次再平衡的成分集合； $r$：再平衡生效时刻； $t\in[r, r_{\text{next}})$。
-* $Q_{i,r}$：成分 $i$ 在 $r$ 的**自由流通供应量快照**。
-* $P_{i,r}$、 $P_{i,t}$：成分 $i$ 的价格。
-* $AS_i^{(r,nat)}$：资产 $i$ 在本次再平衡基点的自然自由流通供应量快照
-* $AS_i^{(r,cap)}$：资产 $i$ 在本次再平衡基点的约束自由流通供应量快照
-* $I_r$：指数在 $r$ 的点位； $D$：对应除数。
+* $C$：Constituent set at the current rebalancing； $r$：Rebalancing effective time； $t\in[r, r_{\text{next}})$
+* $Q_{i,r}$：**Snapshot of the free-float supply**of constituent $i$ at time $r$
+* $P_{i,r}$、 $P_{i,t}$：Prices of constituent $i$ 
+* $AS_i^{(r,nat)}$：Snapshot of the natural free-float shares of asset $i$ at the current rebalancing base
+* $AS_i^{(r,cap)}$：Snapshot of the constrained free-float shares of asset $i$ at the current rebalancing base
+* $I_r$：Index level at time $r$； $D$：Corresponding divisor
 
 ### 6.2 Natural Weights  $w_i^{\mathrm{nat}}$
 
@@ -238,7 +238,7 @@ $$
 
 ### 6.3 Applying the 50% Cap and Iterative Redistribution to Obtain Constrained Weights $w_i^{\mathrm{cap}}$
 
-对自然权重施加单一资产上限 50%，并将超额按未触顶成分的自然权重比例分配，必要时迭代直至全部 $\le 50$%。
+A 50% maximum weight constraint is applied to the natural weights. Any excess weight above 50% is redistributed to unconstrained constituents in proportion to their natural weights, with additional iterations as needed until all weights are $\le 50$%。
 
 Define the capped set $O={i\mid w_i^{\mathrm{nat}}\ge 50}$% and the uncapped set $U=C\setminus O$。
 
@@ -263,32 +263,32 @@ If any newly computed $w_i^{\mathrm{cap}}>50\%$，$O,U,E$ are updated and the pr
 
 ### 6.4 Normalization to Ensure $\sum_i w_i^{\mathrm{cap}}=1$
 
-经过6.3节计算，得到一组暂态约束权重 $\widehat{w}_i$，其中
-- 对触顶集合 $O$： $\widehat{w}_i\le 50\%$ 且通常 $\widehat{w}_i=50$%；
-- 对未触顶集合 $U$： $\widehat{w}_i<50$%。
+After the computation in Section 6.3, a set of interim constrained weights $\widehat{w}_i$ is obtained such that:
+- For the capped set $O$： $\widehat{w}_i\le 50\%$ and typically $\widehat{w}_i=50$%；
+- For the uncapped set $U$： $\widehat{w}_i<50$%.
 
-由于数值误差， $\sum_i \widehat{w}_i$ 可能不等于 1。为既精确合计为 1又不破坏上限，只对U集合做等比缩放、保持O集合不变。
+Due to numerical rounding, $\sum_i \widehat{w}_i$ may deviate slightly from 1.To ensure the total sums to 1 without breaking the cap, only the weights in set $U$ are rescaled, while weights in set $O$ remain fixed.
 
-给定
+Let:
 
 $$
 \sum_i w_i^{\text{cap}} = S_O + \alpha S_U = 1
 $$
 
- 其中
+where:
 
 $$  
 S_O = \sum_{i\in O} \widehat{w}_i,\qquad  
 S_U = \sum_{i\in U} \widehat{w}_i
 $$
 
-得到
+gives:
 
 $$
 \alpha = \frac{1 - S_O}{S_U}
 $$
 
-所以
+Thus:
 
 $$
 w_i^{\mathrm{cap}} =
@@ -298,51 +298,51 @@ w_i^{\mathrm{cap}} =
 \end{cases}
 $$
 
-### 6.5 关于 $AS_i^{(nat)}$修正为 $AS_i^{(cap)}$
+### 6.5 Adjusting $AS_i^{(nat)}$to $AS_i^{(cap)}$
 
-为引入50%单一资产上限并在基点 $r$ 精确复制该约束后的约束权重，我们在 $r$ 时对 $AS_i^{(nat)}$作一次性更新为 $AS_i^{(cap)}$；其后份额在整个区间 $[r, r_{\text{next}})$ 保持不变，指数仅随价格波动。 
+To incorporate the 50% cap and ensure that the constrained weights are exactly reproduced at the base time $r$ , the natural shares $AS_i^{(nat)}$ are updated once at time $r$ to obtain constrained shares $AS_i^{(cap)}$.Thereafter, these constrained shares remain constant over the interval $[r, r_{\text{next}})$, and the Index only evolves with price changes.
 
 $$
 AS_i^{(r,cap)} =
 \begin{cases}
 AS_i^{(r,nat)}\times
-\underbrace{\dfrac{w_i^{(r,cap)}}{w_i^{(r,nat)}}}_{\gamma_i\;\text{（权重修正系数）}}, & w_i^{(r,nat)}>0,\\
+\underbrace{\dfrac{w_i^{(r,cap)}}{w_i^{(r,nat)}}}_{\gamma_i\;\text{（weight adjustment ）}}, & w_i^{(r,nat)}>0,\\
 0, & w_i^{(r,nat)}=0.
 \end{cases}
 $$
 
-### 6.6 修正后的指数计算公式
+### 6.6 Index Formula with Constrained Weights
 
 $$
 I_t = I_r \cdot \sum_{i\in C} w_i^{(r,cap)} \cdot \frac{P_{i,t}}{P_{i,r}}
 $$
 
-## 7. 发布频率
+## 7. Publication Frequency
 
-* 实时发布，**每分钟刷新**
-* 每日收盘取 UTC 00:00
+* Published in real time,**updated every minute**
+* Daily closing level is fixed at UTC 00:00
 
-## 8. 加密资产“公司行为”处理
+## 8. Treatment of Crypto “Corporate Actions”
 
-* **硬分叉**：视为分拆，调整除数，新链不自动纳入，下次重构评估
-* **空投**：视为特殊分红，调整除数
-* **合并/兑换/改名**：保持经济等价调整，必要时调除数
-* **销毁/增发/解锁**：反映在供应量口径（影响未来权重），**不调除数**
-* **退市/暂停**：无可靠价格可替换并调整除数
+* **Hard Forks**：Treated as spin-offs. The divisor is adjusted; the new chain is not automatically included and will be evaluated at the next reconstitution
+* **Airdrops**：Treated as special dividends with corresponding divisor adjustments
+* **Mergers / Swaps / Renames**：Adjustments are made to preserve economic equivalence, with divisor changes as needed
+* **Burns / Issuance / Unlocks**：Reflected in the supply definition (affecting future weights) but**do not trigger divisor changes**
+* **Delistings / Suspensions**：If no reliable price is available, substitutions may be made and the divisor adjusted accordingly
 
-## 9. 治理
+## 9. Governance
 
-* **指数委员会**：维护方法论、合格交易所名单，裁定异常
-* **方法论变更**：重大调整提前 ≥ 5 个工作日公告（紧急除外）
-* **数据政策**：所有来源与调整留痕备查
-* **年度审查**：参数与规则年度复核
+* **Index Committee**：Maintains the methodology, approves the list of qualified exchanges, and rules on exceptional cases
+* **Methodology Changes**：Material changes are announced at least five business days in advance (except in emergencies)
+* **Data Policy**：All data sources and adjustments must be documented and retained for review
+* **Annual Review**：Parameters and rules are reviewed at least annually
 
-## 10. 发布与授权
+## 10. Publication and Licensing
 
 * **Codes and Identifiers**：Index code: C10; additional identifiers may be obtained as needed
 * **Licensing**：Use of the Index for financial products requires a license agreement
 * **Dissemination**：The Index is disseminated via administrator APIs/data feeds and the official website
 
-## 11. 免责声明
+## 11. Disclaimer
 
-本文档仅供参考，不构成投资建议或买卖要约。加密资产波动性高，可能损失全部价值。管理员力求准确，但不保证结果，方法论可按治理政策调整。历史表现不代表未来结果。
+This document is for informational purposes only and does not constitute investment advice or an offer to buy or sell any security or cryptoasset. Cryptoassets are highly volatile and may result in a total loss of value. While the administrator seeks to ensure the accuracy of the Index and this methodology, no guarantee is given, and the methodology may be amended in accordance with the governance policy. Past performance is not indicative of future results.
