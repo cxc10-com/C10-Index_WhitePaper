@@ -44,7 +44,7 @@ The C10 Index **Free-Float Market-Cap** Weighted Cryptocurrency Index (the “In
 
 ### 4.1 Quarterly Reconstitution
 
-On the second-to-last business day of each quarter (the “Selection Date”), the Index Universe is ranked by USD free-float market capitalization and the top ten assets are selected as constituents, using the data definitions in Section 5. Changes are announced at least three business days in advance and take effect at 00:00 UTC on the first day of the following quarter.
+On the second-to-last business day of each quarter (the “Selection Date”), the Index Universe is ranked by USD **free-float market capitalization** and the top ten assets are selected as constituents, using the data definitions in Section 5. Changes are announced at least three business days in advance and take effect at 00:00 UTC on the first day of the following quarter.
 
 ### 4.2 Monthly Rebalancing
 
