@@ -345,4 +345,4 @@ $$
 
 ## 11. Disclaimer
 
-This document is for informational purposes only and does not constitute investment advice or an offer to buy or sell any security or cryptoasset. Cryptoassets are highly volatile and may result in a total loss of value. While the administrator seeks to ensure the accuracy of the Index and this methodology, no guarantee is given, and the methodology may be amended in accordance with the governance policy. Past performance is not indicative of future results.
+This document is for informational purposes only and does not constitute investment advice or an offer to buy or sell any cryptoasset. Cryptoassets are highly volatile and may result in a total loss of value. The Index methodology may be changed under the applicable governance policy. Past performance is not indicative of future results.
