@@ -8,7 +8,7 @@
 
 ## 1. Overview
 
-The C10 Index**Free-Float Market-Cap**Weighted Cryptocurrency Index (the “Index”) measures the performance of the top ten cryptoassets by free-float market capitalization (excluding stablecoins, wrapped tokens, and staking receipts). The Index employs **a modified market capitalization weighting**scheme to limit concentration in any single asset. **A maximum single-constituent weight of 50% is imposed**, making the Index suitable for benchmarking, portfolio construction, and index-linked products.
+The C10 Index **Free-Float Market-Cap** Weighted Cryptocurrency Index (the “Index”) measures the performance of the top ten cryptoassets by free-float market capitalization (excluding stablecoins, wrapped tokens, and staking receipts). The Index employs **a modified market capitalization weighting** scheme to limit concentration in any single asset. **A maximum single-constituent weight of 50% is imposed**, making the Index suitable for benchmarking, portfolio construction, and index-linked products.
 
 ## 2. Index Summary
 
