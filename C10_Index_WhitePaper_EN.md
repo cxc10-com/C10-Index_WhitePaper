@@ -48,7 +48,7 @@ On the second-to-last business day of each quarter (the “Selection Date”), t
 
 ### 4.2 Monthly Rebalancing
 
-On the first day of each calendar month at 00:00 UTC, the Index**locks in constituent shares**in accordance with the calculation methodology. No changes to the set of constituents are made during monthly rebalancing; only weights (via locked shares) are adjusted.
+On the first calendar day of each month at 00:00 UTC, constituent shares are locked in according to the methodology, and the constituent set remains unchanged.
 
 ### 4.3 Non-Regular Adjustments
 
