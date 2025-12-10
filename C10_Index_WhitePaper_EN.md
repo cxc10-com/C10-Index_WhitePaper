@@ -238,7 +238,7 @@ $$
 
 ### 6.3 Applying the 50% Cap and Iterative Redistribution to Obtain Constrained Weights $w_i^{\mathrm{cap}}$
 
-A 50% maximum weight constraint is applied to the natural weights. Any excess weight above 50% is redistributed to unconstrained constituents in proportion to their natural weights, with additional iterations as needed until all weights are $\le 50$%。
+A 50% maximum weight constraint is applied to the natural weights. Any excess weight above 50% is redistributed to unconstrained constituents in proportion to their natural weights, with additional iterations as needed until all weights are $\le 50$%.
 
 Define the capped set $O={i\mid w_i^{\mathrm{nat}}\ge 50}$% and the uncapped set $U=C\setminus O$.
 
@@ -259,7 +259,7 @@ w_i^{\mathrm{nat}} +
 \end{cases}
 $$
   
-If any newly computed $w_i^{\mathrm{cap}}>50\%$，$O,U,E$ are updated and the procedure is repeated until convergence. Small numerical discrepancies may be corrected by a final normalization such that $\sum_i w_i^{\mathrm{cap}}=1$。
+If any newly computed $w_i^{\mathrm{cap}}>50\%$，$O,U,E$ are updated and the procedure is repeated until convergence. Small numerical discrepancies may be corrected by a final normalization such that $\sum_i w_i^{\mathrm{cap}}=1$.
 
 ### 6.4 Normalization to Ensure $\sum_i w_i^{\mathrm{cap}}=1$
 
