@@ -25,13 +25,13 @@ The C10 Index**Free-Float Market-Cap**Weighted Cryptocurrency Index (the “Inde
 
 ### 3.1 Inclusion Criteria
 
-1. Listed on at least two qualified exchanges with transparent and auditable market data.
-2. A reliable USD-denominated price is available, either directly or via a major USD stablecoin trading pair
-3. Liquidity: the median daily trading volume over the past 90 calendar days is at least USD 10 million, with at least 85 days of valid (non-zero) trading
-4. Free-float supply data can be independently verified
-5. On an initial and continuing basis, the underlying commodity (cryptoasset) trades on a market that is a member of the Intermarket Surveillance Group (“ISG”), and the exchange on which an Index-linked product is listed can obtain relevant trading and surveillance information on such commodity from that ISG member
-6. On an initial and continuing basis, the underlying commodity is the reference asset of a futures contract that has been available to trade on a Designated Contract Market (“DCM”) for at least six months, and the exchange on which an Index-linked product is listed maintains a comprehensive surveillance-sharing arrangement with such DCM (including a direct surveillance-sharing agreement or an arrangement achieved via both parties being ISG members)
-7. On an initial basis, there exists an exchange-traded fund (“ETF”) listed and traded on a national securities exchange that maintains economic exposure of no less than 40% of its net asset value to such underlying commodity
+* Listed on at least two qualified exchanges with transparent and auditable market data.
+* A reliable USD-denominated price is available, either directly or via a major USD stablecoin trading pair
+* Liquidity: the median daily trading volume over the past 90 calendar days is at least USD 10 million, with at least 85 days of valid (non-zero) trading
+* Free-float supply data can be independently verified
+* On an initial and continuing basis, the underlying commodity (cryptoasset) trades on a market that is a member of the Intermarket Surveillance Group (“ISG”), and the exchange on which an Index-linked product is listed can obtain relevant trading and surveillance information on such commodity from that ISG member
+* On an initial and continuing basis, the underlying commodity is the reference asset of a futures contract that has been available to trade on a Designated Contract Market (“DCM”) for at least six months, and the exchange on which an Index-linked product is listed maintains a comprehensive surveillance-sharing arrangement with such DCM (including a direct surveillance-sharing agreement or an arrangement achieved via both parties being ISG members)
+* On an initial basis, there exists an exchange-traded fund (“ETF”) listed and traded on a national securities exchange that maintains economic exposure of no less than 40% of its net asset value to such underlying commodity
 
 ### 3.2 Exclusion Rules
 
