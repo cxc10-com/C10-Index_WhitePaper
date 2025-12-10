@@ -1,102 +1,102 @@
-# C10 Index 加权加密货币指数 — 白皮书（v1.7）
+# C10 Index 加权加密货币指数 — 白皮书（En）
 
-**日期**：2025-10-18
-**发起方**：CXC10
-**基准点位**：1,000（基准日：2025-08-16 UTC 00:00）
-**基准货币**：美元（USD）
-**数据来源**：CoinGecko
+**Date**：2025-10-18
+**Sponsor**：CXC10
+**Base Value**：1,000（Base Date：2025-08-16 UTC 00:00）
+**Base Currency**：US Dollar（USD）
+**Data Source**：CoinGecko
 
-## 1. 摘要
+## 1. Overview
 
 C10 Index 加权加密货币指数（以下简称“指数”）衡量按**自由流通市值**排名前十的加密资产（不含稳定币、包装代币和质押凭证）的整体表现，并通过**修正市值加权**限制单一资产集中度。指数设定**单一成分权重上限为 50%**，适用于基准衡量、投资组合构建及相关产品复制。
 
-## 2. 指数概览
+## 2. Index Summary
 
-* **覆盖范围**：符合条件且在合格现货交易所自由交易的加密资产
-* **成分数量**：10
-* **计价货币**：USD
-* **加权方式**：自由流通市值加权 + 50% 上限，超额按比例迭代分配
-* **成分调整（重构）**：每季度一次
-* **权重调整（再平衡）**：每月一次
-* **发布频率**：实时，**每分钟刷新**；每日收盘为 UTC 00:00
-* **特殊事件**：分叉、空投、销毁、解锁等通过**除数**或**成分**调整处理
+* **Universe**：Cryptoassets that meet the eligibility criteria and are freely tradable on qualified spot exchanges
+* **Number of Constituents**：10
+* **Index Currency**：USD
+* **Weighting Method**：Free-float market-cap weighting with a 50% cap; excess weight is redistributed iteratively on a pro-rata basis
+* **Constituent Review (Reconstitution)**：Quarterly
+* **Weight Review (Rebalancing)**：Monthly
+* **Publication Frequency**：Real-time，**updated every minute**；daily close fixed at UTC 00:00
+* **Corporate Actions and Special Events**：Forks, airdrops, burns, unlocks and similar events are handled via**divisor**or**constituent**adjustments
 
-## 3. 纳入与排除标准
+## 3. Inclusion and Exclusion Criteria
 
-### 3.1 纳入标准
+### 3.1 Inclusion Criteria
 
-1. 至少两家合格交易所上市，市场透明、可审计
+1. Listed on at least two qualified exchanges with transparent and auditable market data.
 2. 可获得 USD 计价价格（直接或通过主流 USD 稳定币对）
-3. 流动性：过去 90 天中位日成交额 ≥ 1,000 万美元，且有效交易日 ≥ 85 天
-4. 可核实的自由流通供应量数据
+3. Liquidity: the median daily trading volume over the past 90 calendar days is at least USD 10 million, with at least 85 days of valid (non-zero) trading
+4. Free-float supply data can be independently verified
 5. 在初始及持续基础上，该基础商品在属于 Intermarket Surveillance Group（“ISG”）成员的市场上交易，且指数所对应的挂牌交易所能够从该 ISG 成员处获取与该商品相关的交易及监管信息；
 6. 在初始及持续基础上，该基础商品作为期货合约的标的资产，且该期货合约已在指定合约市场（Designated Contract Market，“DCM”）连续上市交易至少六个月，同时指数所对应的挂牌交易所与该 DCM 之间存在全面的监管信息共享安排（包括直接签署的监管共享协议，或通过双方同为 ISG 成员实现的信息共享）；
 7. 在初始基础上，存在一只交易型开放式指数基金（ETF）已在全国性证券交易所上市交易，且该 ETF 对该基础商品的经济敞口不低于其净资产价值的 40%。
 
-### 3.2 排除规则
+### 3.2 Exclusion Rules
 
-* 稳定币
-* 包装/跨链代币
-* 存在重大合规或安全风险的资产（委员会裁量）
-* 多代码重复经济权益仅保留主表示
+* Stablecoins（USDT、USDC、USDE etc）
+* Wrapped or cross-chain representations of other assets（WBTC、WETH、stETH、wstETH、eETH、WBETH etc）
+* Assets subject to material regulatory, legal, or security risks (at the discretion of the Index Committee)
+* Multiple tickers representing the same underlying economic exposure, in which case only the primary representation is retained
 
-## 4. 成分选取、重构与再平衡
+## 4. Constituent Selection, Reconstitution, and Rebalancing
 
-### 4.1 季度重构
+### 4.1 Quarterly Reconstitution
 
-每季度末倒数第二个工作日（选样日）按**自由流通市值**（USD）排序取前十，数据口径见第 5 节。公告提前 ≥ 3 个工作日发布，新成分于下季度首日 UTC 00:00 生效。
+On the second-to-last business day of each calendar quarter (the “Selection Date”), the Index universe is sorted by**free-float market capitalization**（USD）, and the top ten assets are selected as constituents. The data definition follows Section 5.Changes are announced at least three business days in advance, and the new constituents become effective at 00:00 UTC on the first day of the next quarter.
 
-### 4.2 月度再平衡
+### 4.2 Monthly Rebalancing
 
-每月首日 UTC 00:00 依据计算口径**锁定份额**，不更换成分。
+On the first day of each calendar month at 00:00 UTC, the Index**locks in constituent shares**in accordance with the calculation methodology. No changes to the set of constituents are made during monthly rebalancing; only weights (via locked shares) are adjusted.
 
-### 4.3 非例行调整
+### 4.3 Non-Regular Adjustments
 
-退市、长时间停牌、重大安全事件等可临时替换成分，并调整除数保持指数连续。
+In the event of delisting, prolonged trading suspension, or major security incidents, the Index may implement ad-hoc constituent substitutions and divisor adjustments to preserve index continuity.
 
-## 5. 价格与供应口径
+## 5. Price and Supply Conventions
 
-### 5.1 价格
+### 5.1 Price
 
-* 取合格交易所现货对 USD（含主流 USD 稳定币）的**成交量加权中位价**或 **VWAP（1 分钟窗口）**
-* 异常值以稳健统计方法剔除
+* Prices are derived from qualified spot exchanges quoting against USD (including major USD stablecoin pairs), using a**volume-weighted median price**or **VWAP (1-minute window)**
+* Outliers are removed using robust statistical methods
 
-### 5.2 自由流通供应量
+### 5.2 Free-Float Supply
 
-* 采用权威数据源（主要为 CoinGecko），剔除锁仓（团队、基金会）、已知丢失币、重复映射份额等
-* 所有调整需留痕记录
+* Free-float supply is obtained from reputable data sources (primarily CoinGecko), with adjustments for locked tokens (team, foundation holdings), known lost coins, duplicate representations, etc
+* All adjustments must be logged and recorded for auditability
 
-### 5.3 市值计算
+### 5.3 Market Capitalization
 
-自由流通市值在时间 $t$ 为：
+The free-float market capitalization at time $t$ is：
 
 $$
 \text{MarketCap}_{i,t} = Q_{i,t}\cdot P_{i,t}
 $$
 
-* $Q_{i,t}$：资产 $i$ 在 $t$ 时刻的**自由流通供应量**
-* $P_{i,t}$：资产 $i$ 在 $t$ 时刻的 USD 价格
+* $Q_{i,t}$：**Free-float supply** of asset $i$ at time $t$ 
+* $P_{i,t}$：USD price of asset $i$ at time $t$
 
-### 5.4 指数定义
+### 5.4 Index Definition
 
-指数在再平衡区间 $[r, r^+)$ 内，以**锁定份额**与**除数**计算：
+Within a rebalancing interval $[r, r^+)$, the Index level is computed using**locked shares**and the **divisor**：
 
 $$
 I_t = \frac{\sum_{i\in C} AS_i^{(r,nat)}\cdot P_{i,t}}{D}
 $$
 
-* $C$：本次再平衡的成分集合
-* $D$：再平衡时刻对应的除数
-* $AS_i^{(r,nat)}$：资产 $i$ 在再平衡基点 $r$ 取各成分的**自然自由流通供应量快照**并锁定，记为：
+* $C$：Constituent set at the current rebalancing
+* $D$：Divisor applicable from the rebalancing time
+* $AS_i^{(r,nat)}$：**Snapshot of the natural free-float number of shares** of asset $i$ at the rebalancing base time $r$, defined and locked as：
 
 $$
 AS_i^{(r,nat)} \equiv Q_{i,r},
-\qquad t\in[r, r_{\text{next}}) \text{ 期间保持不变。}
+\qquad t\in[r, r_{\text{next}}) \text{ during which it remains constant。}
 $$
 
-### 5.5 除数 $D$ 的初始定标
+### 5.5 Initial Calibration of the Divisor $D$ 
 
-基准日 $t_0$ 指数设定为 $I_{t_0}=1000$：
+On the base date $t_0$, the Index level is set to $I_{t_0}=1000$：
 
 $$
 D_{\text{initial}}
@@ -104,30 +104,30 @@ D_{\text{initial}}
 =\frac{\sum_{i\in C_{t_0}} AS_i^{(t_0,nat)}\cdot P_{i,t_0}}{I_{t_0}}
 $$
 
-### 5.6 再平衡时除数 $D$ 的调整
+### 5.6 Divisor $D$ Adjustment at Rebalancing
 
-为保证指数在再平衡**接点不跳变**，令
+To ensure that the Index**does not jump**at the rebalancing point, define:
 
 $$
 I_r \coloneqq I_{r^-}, \qquad P_{i,r}\coloneqq P_{i,r^-}
 $$
 
-- $I_r$：本次再平衡时刻后一瞬间的指数点
-- $I_{r-}$：本次再平衡时刻前一瞬间的指数点
-- $P_{i,r}$：资产 $i$ 在本次再平衡时刻后一瞬间的USD价格。
-- $P_{i,r-}$：资产 $i$ 在本次再平衡时刻前一瞬间的USD价格。
+- $I_r$：Index value immediately after the rebalancing time
+- $I_{r-}$：Index value immediately before the rebalancing time
+- $P_{i,r}$：USD price of asset $i$ immediately after the rebalancing time
+- $P_{i,r-}$：USD price of asset $i$ immediately before the rebalancing time
 
-于是
+Thus:
 
 $$
 I_{r^-}=\frac{\sum_{i\in C_{\text{old}}} AS_i^{(r^-,nat)}P_{i,r}}{D_{\text{old}}},\qquad
 I_{r}=\frac{\sum_{i\in C_{\text{new}}} AS_i^{(r,nat)}P_{i,r}}{D_{\text{new}}}
 $$
 
-- $AS_i^{(r,nat)}$：资产 $i$ 在本次再平衡基点的自然自由流通供应量快照
-- $AS_i^{(r-,nat)}$：资产 $i$ 在前次再平衡基点的自然自由流通供应量快照
+- $AS_i^{(r,nat)}$：Snapshot of the natural free-float shares of asset $i$ at the current rebalancing base
+- $AS_i^{(r-,nat)}$：Snapshot of the natural free-float shares of asset $i$ at the previous rebalancing base
 
-令 $I_r=I_{r^-}$ 可得“比值法”：
+Setting $I_r=I_{r^-}$ yields the familiar “ratio method”：
 
 $$
 D_{\text{new}}
@@ -136,35 +136,35 @@ D_{\text{new}}
 {\sum_{i\in C_{\text{old}}} AS_i^{(r^-,nat)}P_{i,r}}
 $$
 
-或由定义直接得到：
+Alternatively, directly from the definition：
 
 $$
 D_{\text{new}}
 =\frac{\sum_{i\in C_{\text{new}}} AS_i^{(r,nat)}P_{i,r}}{I_r}
 $$
 
-- $D_{\text{old}}$：前次再平衡的除数
-- $D_{\text{new}}$：本次再平衡的除数
-- $C_{\text{old}}$：前次再平衡的成分集合
-- $C_{\text{new}}$：本次再平衡的成分集合
+- $D_{\text{old}}$：Divisor prior to rebalancing
+- $D_{\text{new}}$：Divisor after rebalancing
+- $C_{\text{old}}$：Constituent set prior to rebalancing
+- $C_{\text{new}}$：Constituent set after rebalancing
 
-### 5.7 指数计算方法论
+### 5.7 Index Calculation Methodology
 
-对任一再平衡时刻 $r$ 都有
+For any rebalancing time $r$ , the divisor satisfies:
 
 $$
 D=\frac{\sum_{i\in C} AS_i^{(r,nat)}P_{i,r}}{I_r},
 $$
 
-从而 5.5 的初始定标（取 $r=t_0$）与 5.6 的再平衡接平在同一表达式下统一。
+从而 5.5 的初始定标（with $r=t_0$）与 5.6 的再平衡接平在同一表达式下统一。
 
-代入指数计算公式
+Substituting into the Index formula:
 
 $$
 I_t=\frac{\sum_{i\in C} AS_i^{(r,nat)}\cdot P_{i,t}}{D}
 $$
 
-可得
+we obtain:
 
 $$
 I_t
@@ -187,7 +187,7 @@ AS_i^{(r,nat)} P_{i,t}
 \underbrace{\frac{P_{i,t}}{P_{i,r}}}_{\text{价格收益}}
 $$
 
-于是：
+Hence:
 
 $$
 I_t
@@ -199,14 +199,14 @@ I_t
 \underbrace{\frac{P_{i,t}}{P_{i,r}}}_{\text{价格收益}}
 $$
 
-令
+Let
 
 $$
 w_i^{(r,nat)}=\frac{AS_i^{(r,nat)}P_{i,r}}{\sum_{j\in C}AS_j^{(r,nat)}P_{j,r}},
 \qquad \sum_{i\in C} w_i^{(r,nat)}=1
 $$
 
-则
+then:
 
 $$
 I_t = I_r \cdot \sum_{i\in C} w_i^{(r,nat)} \cdot \frac{P_{i,t}}{P_{i,r}}
@@ -214,11 +214,11 @@ $$
 
 > 解释：指数等于**基期点位**乘以**加权价格变化**；此处 $w_i^{(r,nat)}$ 为再平衡基点的**自然权重**。
 
-## 6. 权重与约束规则
+## 6. Weighting and Constraints
 
 采用 **自由流通市值加权(Free-Float MCAP)** 并施加约束。
 
-### 6.1 符号与前置
+### 6.1 Notation and Setup
 
 * $C$：本次再平衡的成分集合； $r$：再平衡生效时刻； $t\in[r, r_{\text{next}})$。
 * $Q_{i,r}$：成分 $i$ 在 $r$ 的**自由流通供应量快照**。
@@ -227,28 +227,28 @@ $$
 * $AS_i^{(r,cap)}$：资产 $i$ 在本次再平衡基点的约束自由流通供应量快照
 * $I_r$：指数在 $r$ 的点位； $D$：对应除数。
 
-### 6.2 自然权重  $w_i^{\mathrm{nat}}$
+### 6.2 Natural Weights  $w_i^{\mathrm{nat}}$
 
-根据未施加约束的自然自由流通供应量快照（ $AS_i^{(r,nat)}\equiv Q_{i,r}$ ）得到当期自然权重：
+Based on the snapshot of unconstrained natural free-float shares（ $AS_i^{(r,nat)}\equiv Q_{i,r}$ ）the natural weight is：
 
 $$
 w_i^{(r,nat)}=\frac{AS_i^{(r,nat)}P_{i,r}}{\sum_{j\in C}AS_j^{(r,nat)}P_{j,r}},
 \qquad \sum_{i\in C} w_i^{(r,nat)}=1
 $$
 
-### 6.3 施加50% 上限与迭代再分配得到约束权重 $w_i^{\mathrm{cap}}$
+### 6.3 Applying the 50% Cap and Iterative Redistribution to Obtain Constrained Weights $w_i^{\mathrm{cap}}$
 
 对自然权重施加单一资产上限 50%，并将超额按未触顶成分的自然权重比例分配，必要时迭代直至全部 $\le 50$%。
 
-定义触顶集合 $O={i\mid w_i^{\mathrm{nat}}\ge 50}$%，未触顶集合 $U=C\setminus O$。
+Define the capped set $O={i\mid w_i^{\mathrm{nat}}\ge 50}$% and the uncapped set $U=C\setminus O$。
 
-定义超额总量：  
+Define the total excess：  
 
 $$
 E=\sum_{i\in O}\bigl(w_i^{\mathrm{nat}}-50％\bigr)
 $$
 
-则约束权重：
+Then the constrained weights are：
 
 $$
 w_i^{\mathrm{cap}} =
@@ -259,9 +259,9 @@ w_i^{\mathrm{nat}} +
 \end{cases}
 $$
   
-若有新的 $w_i^{\mathrm{cap}}>50\%$，更新 $O,U,E$ 并重复上式直至收敛。数值上如有微小累积误差，可作一次归一化使 $\sum_i w_i^{\mathrm{cap}}=1$。
+If any newly computed $w_i^{\mathrm{cap}}>50\%$，$O,U,E$ are updated and the procedure is repeated until convergence. Small numerical discrepancies may be corrected by a final normalization such that $\sum_i w_i^{\mathrm{cap}}=1$。
 
-### 6.4 归一化使 $\sum_i w_i^{\mathrm{cap}}=1$
+### 6.4 Normalization to Ensure $\sum_i w_i^{\mathrm{cap}}=1$
 
 经过6.3节计算，得到一组暂态约束权重 $\widehat{w}_i$，其中
 - 对触顶集合 $O$： $\widehat{w}_i\le 50\%$ 且通常 $\widehat{w}_i=50$%；
@@ -339,9 +339,9 @@ $$
 
 ## 10. 发布与授权
 
-* **代码与标识符**：代码 C10；其他识别码按需申请
-* **授权**：用于金融产品需签署许可
-* **发布**：管理员 API/数据源与官网同步
+* **Codes and Identifiers**：Index code: C10; additional identifiers may be obtained as needed
+* **Licensing**：Use of the Index for financial products requires a license agreement
+* **Dissemination**：The Index is disseminated via administrator APIs/data feeds and the official website
 
 ## 11. 免责声明
 
