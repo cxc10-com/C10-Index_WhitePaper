@@ -25,7 +25,7 @@ The C10 Index**Free-Float Market-Cap**Weighted Cryptocurrency Index (the “Inde
 
 ### 3.1 Inclusion Criteria
 
-* Listed on at least two qualified exchanges with transparent and auditable market data.
+* Listed on at least two qualified exchanges with transparent and auditable market data
 * A reliable USD-denominated price is available, either directly or via a major USD stablecoin trading pair
 * Liquidity: the median daily trading volume over the past 90 calendar days is at least USD 10 million, with at least 85 days of valid (non-zero) trading
 * Free-float supply data can be independently verified
@@ -91,7 +91,7 @@ $$
 
 $$
 AS_i^{(r,nat)} \equiv Q_{i,r},
-\qquad t\in[r, r_{\text{next}}) \text{ during which it remains constant。}
+\qquad t\in[r, r_{\text{next}}) \text{ during which it remains constant}
 $$
 
 ### 5.5 Initial Calibration of the Divisor $D$ 
@@ -150,7 +150,7 @@ $$
 
 ### 5.7 Index Calculation Methodology
 
-For any rebalancing time $r$ , the divisor satisfies:
+For any rebalancing time $r$, the divisor satisfies:
 
 $$
 D=\frac{\sum_{i\in C} AS_i^{(r,nat)}P_{i,r}}{I_r},
