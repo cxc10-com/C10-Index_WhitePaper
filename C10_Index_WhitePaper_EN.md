@@ -259,7 +259,7 @@ w_i^{\mathrm{nat}} +
 \end{cases}
 $$
   
-If any newly computed $w_i^{\mathrm{cap}}>50\%$，$O$,$U$,$E$ are updated and the procedure is repeated until convergence. Small numerical discrepancies may be corrected by a final normalization such that $\sum_i w_i^{\mathrm{cap}}=1$.
+If any newly computed $w_i^{\mathrm{cap}}>50\%$，$O,U,E$ are updated and the procedure is repeated until convergence. Small numerical discrepancies may be corrected by a final normalization such that $\sum_i w_i^{\mathrm{cap}}=1$.
 
 ### 6.4 Normalization to Ensure $\sum_i w_i^{\mathrm{cap}}=1$
 
