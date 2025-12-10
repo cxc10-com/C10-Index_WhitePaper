@@ -300,7 +300,7 @@ $$
 
 ### 6.5 Adjusting $AS_i^{(nat)}$ to $AS_i^{(cap)}$
 
-To impose the 50% single-constituent cap, the natural shares $AS_i^{(nat)}$ are updated once at time $r$ to constrained shares $AS_i^{(cap)}$.Thereafter, $AS_i^{(cap)}$ is held constant over $[r, r_{\text{next}})$, and the Index only evolves with price changes.
+To impose the $50$% single-constituent cap, the natural shares $AS_i^{(nat)}$ are updated once at time $r$ to constrained shares $AS_i^{(cap)}$.Thereafter, $AS_i^{(cap)}$ is held constant over $[r, r_{\text{next}})$, and the Index only evolves with price changes.
 
 $$
 AS_i^{(r,cap)} =
