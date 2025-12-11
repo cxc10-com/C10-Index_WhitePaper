@@ -259,7 +259,7 @@ w_i^{\mathrm{nat}} +
 \end{cases}
 $$
   
-If any newly computed $w_i^{\mathrm{cap}}>50\%$, $O,U,E$ are updated and the procedure is repeated until convergence. Small numerical discrepancies may be corrected by a final normalization such that $\sum_i w_i^{\mathrm{cap}}=1$.
+If any newly computed $w_i^{\mathrm{cap}}>50\%$, $O$,$U$, and $E$ are updated and the procedure is repeated until convergence. Small numerical discrepancies may be corrected by a final normalization such that $\sum_i w_i^{\mathrm{cap}}=1$.
 
 ### 6.4 Normalization to Ensure $\sum_i w_i^{\mathrm{cap}}=1$
 
@@ -300,7 +300,7 @@ $$
 
 ### 6.5 Adjusting $AS_i^{(nat)}$ to $AS_i^{(cap)}$
 
-To impose the $50$% single-constituent cap, the natural shares $AS_i^{(nat)}$ are updated once at time $r$ to constrained shares $AS_i^{(cap)}$.Thereafter, $AS_i^{(cap)}$ is held constant over $[r, r_{\text{next}})$, and the Index only evolves with price changes.
+To impose the $50$% single-constituent cap, the natural shares $AS_i^{(r,nat)}$ are updated once at time $r$ to constrained shares $AS_i^{(r,cap)}$.Thereafter, $AS_i^{(r,cap)}$ is held constant over $[r, r_{\text{next}})$, and the Index only evolves with price changes.
 
 $$
 AS_i^{(r,cap)} =
@@ -346,3 +346,144 @@ $$
 ## 11. Disclaimer
 
 This document is for informational purposes only and does not constitute investment advice or an offer to buy or sell any cryptoasset. Cryptoassets are highly volatile and may result in a total loss of value. The Index methodology may be changed under the applicable governance policy. Past performance is not indicative of future results.
+
+## 12. Performance & Risk Characteristics
+
+This section summarizes the standard return and risk measures commonly used to describe the historical behavior of the Index. All metrics are computed using the official daily closing Index level at 00:00 UTC, unless otherwise stated.
+
+### 12.1 Return Measures
+
+Let $I_t$ denote the official Index level on calendar day $t$ and $R_t$ the simple daily return.
+
+**Daily Return**
+
+$$
+R_t = \frac{I_t}{I_{t-1}} - 1
+$$
+
+**Cumulative (Total) Return**
+
+Over a horizon from $t_0$ to $T$:
+
+$$
+R_{\text{tot}}(t_0, T) = \frac{I_T}{I_{t_0}} - 1
+$$
+
+**Annualized Return**
+
+For a period of $N$ calendar days with simple daily returns $\{R_t\}_{t=1}^N$, the annualized return on a 365-day basis is defined as:
+
+$$
+R_{\text{ann}} = \left(\prod_{t=1}^{N} (1+R_t)\right)^{\frac{365}{N}} - 1
+$$
+
+In practice, the Index Administrator may compute and publish trailing 1-month, 3-month, 6-month, 1-year and since-inception performance, based on the above conventions.
+
+### 12.2 Volatility
+
+Volatility is measured as the standard deviation of daily returns and is annualized on a 365-day basis.
+
+Let $\bar{R}$ denote the sample mean of daily returns over $N$ calendar days:
+
+$$
+\bar{R} = \frac{1}{N}\sum_{t=1}^{N} R_t
+$$
+
+**Daily Volatility**
+
+$$
+\sigma_{\text{daily}} = \sqrt{\frac{1}{N-1}\sum_{t=1}^{N} (R_t - \bar{R})^2}
+$$
+
+**Annualized Volatility**
+
+$$
+\sigma_{\text{ann}} = \sigma_{\text{daily}}\cdot\sqrt{365}
+$$
+
+Volatility is typically reported as trailing annualized volatility over standard lookback windows (e.g., 30, 90, 180 and 365 calendar days).
+
+### 12.3 Drawdowns and Maximum Drawdown
+
+Drawdown measures the decline of the Index from its previous historical peak.
+
+Let
+
+$$
+H_t = \max_{0\leq \tau \leq t} I_\tau
+$$
+
+denote the running historical high of the Index up to day $t$.
+
+**Drawdown at Time $t$**
+
+$$
+DD_t = \frac{I_t - H_t}{H_t}
+$$
+
+Drawdown is typically expressed as a negative percentage.
+
+**Maximum Drawdown Over a Period**
+
+Over a horizon from $t_0$ to $T$:
+
+$$
+\text{MaxDD}(t_0, T) = \min_{t_0 \leq t \leq T} DD_t
+$$
+
+Maximum drawdown summarizes the largest peak-to-trough decline observed over the specified period and is a standard risk measure for highly volatile asset classes such as cryptoassets.
+
+### 12.4 Correlation and Beta
+
+Correlation and beta are used to characterize the relationship between the Index and other benchmarks (for example, single-asset crypto benchmarks or broader crypto market indices).
+
+Let $R_t^{\text{Index}}$ denote the daily returns of the Index and $R_t^{\text{Ref}}$ the daily returns of a reference benchmark, both measured over the same period of $N$ days.
+
+**Correlation**
+
+$$
+\rho = \frac{\operatorname{Cov}\left(R_t^{\text{Index}}, R_t^{\text{Ref}}\right)}{\sigma\left(R_t^{\text{Index}}\right)\,\sigma\left(R_t^{\text{Ref}}\right)}
+$$
+
+**Beta**
+
+$$
+\beta = \frac{\operatorname{Cov}\left(R_t^{\text{Index}}, R_t^{\text{Ref}}\right)}{\operatorname{Var}\left(R_t^{\text{Ref}}\right)}
+$$
+
+These statistics are typically computed using simple daily returns and may be reported on a trailing basis for standard horizons.
+
+### 12.5 Concentration and Turnover
+
+The Index uses a free-float market capitalization weighting scheme subject to a 50% single-constituent cap, as described in Section 6. Concentration and turnover metrics provide additional insight into the Index’s structural risk profile.
+
+**Weight Concentration**
+
+A simple measure of concentration is the Herfindahl–Hirschman Index (“HHI”) based on the constrained weights $w_i^{(r,\mathrm{cap})}$ at rebalancing time $r$:
+
+$$
+\text{HHI}_r = \sum_{i\in C} \left(w_i^{(r,\mathrm{cap})}\right)^2
+$$
+
+Higher values of $\text{HHI}$ indicate greater concentration in fewer constituents. The 50% cap limits single-asset concentration and helps maintain a minimum level of diversification.
+
+**Turnover**
+
+Portfolio turnover between two consecutive rebalancing dates $r$ and $r_{\text{next}}$ is measured as:
+
+$$
+\text{Turnover}(r, r_{\text{next}})
+= \frac{1}{2}\sum_{i\in C} \left| w_i^{(r_{\text{next}},\mathrm{cap})} - w_i^{(r,\mathrm{cap})} \right|
+$$
+
+Turnover reflects the extent of weight changes required by the methodology and is relevant for index-tracking products, as higher turnover may imply higher trading costs.
+
+### 12.6 Backtested Performance and Limitations
+
+Prior to the official start (live) date of the Index, historical Index levels may be calculated on a backtested basis using the same methodology, rules, and data sources as described in this document. Backtested results are purely hypothetical and are subject to a number of important limitations, including but not limited to:
+
+* Backtested performance is generated with the benefit of hindsight and does not reflect actual trading, liquidity constraints, transaction costs, or operational frictions.  
+* Backtested performance may differ materially from the performance of any live index or investable product that seeks to track the Index.  
+* Methodology changes, data revisions, and corporate actions may affect historical levels if implemented on a restated basis.  
+
+Any performance and risk statistics derived from backtested data should therefore be viewed as illustrative only and not as a guarantee or indication of future results.
