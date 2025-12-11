@@ -31,7 +31,7 @@ The C10 **Free-Float Market-Cap** Weighted Cryptocurrency Index (the “Index”
 * Free-float supply data can be independently verified
 * On an initial and continuing basis, the underlying cryptoasset trades on an Intermarket Surveillance Group (“ISG”) member market from which the listing exchange can obtain trading and surveillance information
 * On an initial and continuing basis, the underlying cryptoasset underlies a futures contract that has traded for at least six months on a Designated Contract Market (“DCM”) with which the listing exchange maintains a comprehensive surveillance-sharing arrangement (directly or through joint ISG membership)
-* On an initial basis, there exists an exchange-traded fund (“ETF”) listed on a national securities exchange that maintains economic exposure of at least 40% of its net asset value to the asset
+* On an initial basis, there exists an exchange-traded fund (“ETF”) listed on a national securities exchange that maintains economic exposure of at least $40$% of its net asset value to the asset
 
 ### 3.2 Exclusion Rules
 
