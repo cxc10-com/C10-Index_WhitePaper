@@ -238,7 +238,7 @@ $$
 
 ### 6.3 Applying the 50% Cap and Iterative Redistribution to Obtain Constrained Weights $w_i^{\mathrm{cap}}$
 
-A $50$% cap is imposed on individual natural weights. Any excess above $50$% is redistributed to unconstrained constituents in proportion to their natural weights, iterating as needed until all weights are at or below $\le 50$%.
+A $50$% single-constituent cap is imposed on individual natural weights. Any excess above $50$% is redistributed to unconstrained constituents in proportion to their natural weights, iterating as needed until all weights are at or below $\le 50$%.
 
 Define the capped set $O={i\mid w_i^{\mathrm{nat}}\ge 50}$% and the uncapped set $U=C\setminus O$.
 
