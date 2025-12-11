@@ -1,10 +1,10 @@
 # C10 Index Free-Float Market-Cap Weighted Cryptocurrency Index — Whitepaper
 
-**Date**：2025-10-18
-**Sponsor**：CXC10
-**Base Value**：1,000（Base Date：2025-08-16 UTC 00:00）
+**Date**：
+**Sponsor**：AIxCrypto
+**Base Value**：1,000（Base Date：XXXX UTC 00:00）
 **Base Currency**：US Dollar（USD）
-**Data Source**：CoinGecko
+**Data Source**：XXXX
 
 ## 1. Overview
 
