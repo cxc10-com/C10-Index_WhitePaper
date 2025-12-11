@@ -17,7 +17,7 @@ The C10 **Free-Float Market-Cap** Weighted Cryptocurrency Index (the “Index”
 * **Index Currency**：USD
 * **Weighting Method**：Free-float market-cap weighting with a 50% cap; excess weight is redistributed iteratively on a pro-rata basis
 * **Constituent Review (Reconstitution)**：Quarterly
-* **Weight Review (Rebalancing)**：Monthly
+* **Weight Adjustment (Rebalancing)**：Monthly
 * **Publication Frequency**：Real-time，**updated every minute** ；daily close fixed at UTC 00:00
 * **Corporate Actions and Special Events**：Forks, airdrops, burns, unlocks and similar events are handled via**divisor**or**constituent**adjustments
 
