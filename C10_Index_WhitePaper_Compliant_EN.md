@@ -448,7 +448,7 @@ $$
 **Beta**
 
 $$
-\beta = \frac{\operatorname{Cov}\left(R_t^{\text{Index}}, R_t^{\text{Ref}}\right)}{\operatorname{Var}\left(R_t^{\text{Ref}}\right)}
+\beta = \frac{\{Cov}\left(R_t^{\text{Index}}, R_t^{\text{Ref}}\right)}{\{Var}\left(R_t^{\text{Ref}}\right)}
 $$
 
 These statistics are typically computed using simple daily returns and may be reported on a trailing basis for standard horizons.
