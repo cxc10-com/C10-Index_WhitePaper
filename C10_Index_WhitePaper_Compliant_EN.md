@@ -442,7 +442,7 @@ Let $R_t^{\text{Index}}$ denote the daily returns of the Index and $R_t^{\text{R
 **Correlation**
 
 $$
-\rho = \frac{\operatorname{Cov}\left(R_t^{\text{Index}}, R_t^{\text{Ref}}\right)}{\sigma\left(R_t^{\text{Index}}\right)\,\sigma\left(R_t^{\text{Ref}}\right)}
+\rho = \frac{\{Cov}\left(R_t^{\text{Index}}, R_t^{\text{Ref}}\right)}{\sigma\left(R_t^{\text{Index}}\right)\,\sigma\left(R_t^{\text{Ref}}\right)}
 $$
 
 **Beta**
