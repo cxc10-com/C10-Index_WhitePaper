@@ -8,7 +8,7 @@
 
 ## 1. Overview
 
-The C10 **Free-Float Market-Cap** Weighted Cryptocurrency Index (the “Index”) measures the performance of the top ten cryptoassets by free-float market capitalization, excluding stablecoins, wrapped tokens, and staking receipts. The Index uses a **modified free-float market-cap weighting** scheme with a **50% single-constituent cap to limit concentration in any one asset**, making it suitable for benchmarking, portfolio construction, and index-linked products.
+The C10 **Free-Float Market-Cap** Weighted Cryptocurrency Index (the “Index”) measures the performance of the top ten cryptoassets by free-float market capitalization, excluding stablecoins, wrapped tokens, and staking receipts. The Index uses a **modified free-float market capitalization weighting** scheme with a **50% single-constituent cap to limit concentration in any one asset**, making it suitable for benchmarking, portfolio construction, and index-linked products.
 
 ## 2. Index Summary
 
@@ -17,26 +17,26 @@ The C10 **Free-Float Market-Cap** Weighted Cryptocurrency Index (the “Index”
 * **Index Currency**：USD
 * **Weighting Method**：Free-float market-cap weighting with a 50% cap; excess weight is redistributed iteratively on a pro-rata basis
 * **Constituent Review (Reconstitution)**：Quarterly
-* **Weight Adjustment (Rebalancing)**：Monthly
-* **Publication Frequency**：Real-time，**updated every minute** ；daily close fixed at UTC 00:00
-* **Corporate Actions and Special Events**：Forks, airdrops, burns, unlocks and similar events are handled via**divisor**or**constituent**adjustments
+* **Weight Review (Rebalancing)**：Monthly
+* **Publication Frequency**：Real-time，**updated every minute** ；daily closing level fixed at UTC 00:00
+* **Corporate Actions and Special Events**：Forks, airdrops, burns, unlocks and similar events are handled through**divisor**or**constituent**adjustments
 
 ## 3. Inclusion and Exclusion Criteria
 
 ### 3.1 Inclusion Criteria
 
-* Listed on at least two qualified exchanges with transparent and auditable market data
+* Listed on at least two qualified exchanges that provide transparent and auditable market data
 * A reliable USD-denominated price is available, either directly or via a major USD stablecoin trading pair
-* Liquidity: the median daily trading volume over the past 90 calendar days is at least USD 10 million, with at least 85 days of valid (non-zero) trading
+* Liquidity: the median daily trading volume over the past 90 calendar days is at least USD 10 million, with at least 85 days of non-zero trading
 * Free-float supply data can be independently verified
 * On an initial and continuing basis, the underlying cryptoasset trades on an Intermarket Surveillance Group (“ISG”) member market from which the listing exchange can obtain trading and surveillance information
 * On an initial and continuing basis, the underlying cryptoasset underlies a futures contract that has traded for at least six months on a Designated Contract Market (“DCM”) with which the listing exchange maintains a comprehensive surveillance-sharing arrangement (directly or through joint ISG membership)
-* On an initial basis only, there exists an exchange-traded fund (“ETF”) that is listed and traded on a national securities exchange and is designed to provide economic exposure of no less than 40% of its net asset value to the asset
+* On an initial basis, there exists an exchange-traded fund (“ETF”) listed on a national securities exchange that maintains economic exposure of at least 40% of its net asset value to the asset
 
 ### 3.2 Exclusion Rules
 
-* Stablecoins（USDT、USDC、USDE etc）
-* Wrapped or cross-chain representations of other assets（WBTC、WETH、stETH、wstETH、eETH、WBETH etc）
+* Stablecoins（USDT、USDC、USDE etc.）
+* Wrapped or cross-chain representations of other assets（WBTC、WETH、stETH、wstETH、eETH、WBETH etc.）
 * Assets subject to material regulatory, legal, or security risks (at the discretion of the Index Committee)
 * Multiple tickers representing the same underlying economic exposure, in which case only the primary representation is retained
 
@@ -48,11 +48,11 @@ On the second-to-last business day of each quarter (the “Selection Date”), t
 
 ### 4.2 Monthly Rebalancing
 
-On the first calendar day of each month at 00:00 UTC, constituent shares are locked in according to the methodology, and the constituent set remains unchanged.
+On the first calendar day of each month at 00:00 UTC, constituent shares are locked in according to the methodology, and the constituent set remains unchanged until the next rebalancing or reconstitution.
 
 ### 4.3 Non-Regular Adjustments
 
-In the event of delisting, prolonged trading suspension, or major security incidents, the Index may implement ad-hoc constituent substitutions and divisor adjustments to preserve index continuity.
+In the event of a delisting, prolonged trading suspension, or major security incident, the Index may implement ad-hoc constituent substitutions and divisor adjustments to preserve index continuity.
 
 ## 5. Price and Supply Conventions
 
@@ -63,7 +63,7 @@ In the event of delisting, prolonged trading suspension, or major security incid
 
 ### 5.2 Free-Float Supply
 
-* Free-float supply is obtained from reputable data sources (primarily CoinGecko), with adjustments for locked tokens (team, foundation holdings), known lost coins, duplicate representations, etc
+* Free-float supply is obtained from reputable data sources (primarily CoinGecko), with adjustments for locked tokens (team and foundation holdings), known lost coins, duplicate representations, etc
 * All adjustments must be logged and recorded for auditability
 
 ### 5.3 Market Capitalization
@@ -222,7 +222,7 @@ The Index uses **free-float market capitalization weighting(Free-Float MCAP)** s
 
 * $C$：Constituent set at the current rebalancing； $r$：Rebalancing effective time； $t\in[r, r_{\text{next}})$
 * $Q_{i,r}$：**Snapshot of the free-float supply**of constituent $i$ at time $r$
-* $P_{i,r}$、 $P_{i,t}$：Prices of constituent $i$ 
+* $P_{i,r}$,$P_{i,t}$：Prices of constituent $i$ 
 * $AS_i^{(r,nat)}$：Snapshot of the natural free-float shares of asset $i$ at the current rebalancing base
 * $AS_i^{(r,cap)}$：Snapshot of the constrained free-float shares of asset $i$ at the current rebalancing base
 * $I_r$：Index level at time $r$； $D$：Corresponding divisor
