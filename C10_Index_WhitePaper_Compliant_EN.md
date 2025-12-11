@@ -371,7 +371,7 @@ $$
 
 **Annualized Return**
 
-For a period of $N$ calendar days with simple daily returns ${\{R_t\}}_{t=1}^N$, the annualized return on a 365-day basis is defined as:
+For a period of $N$ calendar days with simple daily returns $\\{R_t\\}_{t=1}^N$, the annualized return on a 365-day basis is defined as:
 
 $$
 R_{\text{ann}} = \left(\prod_{t=1}^{N} (1+R_t)\right)^{\frac{365}{N}} - 1
